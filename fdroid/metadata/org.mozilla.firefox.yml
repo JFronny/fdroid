@@ -1,0 +1,13 @@
+Categories:
+  - Internet
+License: MPL-2.0
+WebSite: https://www.mozilla.org/firefox/
+IssueTracker: https://bugzilla.mozilla.org/
+Changelog: https://www.mozilla.org/firefox/releases/
+Donate: https://donate.mozilla.org/
+
+Summary: Firefox
+Description: Firefox browser for Android
+
+AutoUpdateMode: None
+UpdateCheckMode: None
