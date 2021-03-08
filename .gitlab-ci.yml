@@ -22,6 +22,7 @@ pages:
     - fdroid update
     - fdroid deploy
     - cd .. && mkdir public && mv -v /fdroid/repo public
+    - mv index.html public/repo/
     - echo "Repo size:" && du -h -d 3 public
     - ls -al public/repo/
   artifacts:
