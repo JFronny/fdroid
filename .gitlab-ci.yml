@@ -3,6 +3,7 @@ image: ubuntu:rolling
 pages:
   stage: deploy
   before_script:
+    - add-apt-repository ppa:fdroid/fdroidserver
     - apt update
     - DEBIAN_FRONTEND=noninteractive apt install -y fdroidserver wget
     - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
