@@ -7,6 +7,7 @@ pages:
     - DEBIAN_FRONTEND=noninteractive apt install -y fdroidserver wget
     - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
     - chmod a+x download.py
+    - mkdir -p fdroid/repo
   script:
     - ./download.py
     - cd fdroid
