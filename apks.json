@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Firefox",
+    "baseUrl": "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.release.latest.{arch}/artifacts/public/build/{arch}/target.apk",
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86"],
+    "forceFileName": "org.mozilla.firefox-{arch}.apk"
+  },
+  {
+    "name": "Signal",
+    "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
+    "forceFileName": "Signal-Android.apk",
+    "version": {
+      "url": "https://updates.signal.org/android/latest.json",
+      "json": "versionName"
+    }
+  }
+]
