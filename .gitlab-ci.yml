@@ -3,7 +3,8 @@ image: ubuntu:rolling
 pages:
   stage: deploy
   before_script:
-    - apt-get install fdroidserver
+    - apt update
+    - apt install fdroidserver
     - echo $KEYSTORE | base64 -d > fdroid/keystore.p12
     - 'echo "keystorepass: $KEYSTOREPASS" >> fdroid/config.yml'
     - 'echo "keypass: $KEYSTOREPASS" >> fdroid/config.yml'
