@@ -1,0 +1,19 @@
+Categories:
+  - System
+License: GPL-3.0
+AuthorName: Xinto
+WebSite: https://vancedapp.com
+SourceCode: https://github.com/YTVanced/VancedManager
+IssueTracker: https://github.com/YTVanced/VancedManager/issues
+Translation: https://crowdin.com/project/vanced-manager
+Changelog: https://github.com/YTVanced/VancedManager/releases
+
+Summary: Vanced Installer
+Description: |-
+    Hi, when we released Vanced 15.05.54, people were upset because it used the .apks format, which was way harder to install than a traditional .apk file. Even though we wrote clear instructions on how to install the new Vanced build, people still couldn't figure it out.
+    Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and understandable UI and be less than 10mb?" and that's how Vanced Manager was born.
+
+    After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface
+
+AutoUpdateMode: None
+UpdateCheckMode: None

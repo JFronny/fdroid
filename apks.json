@@ -40,6 +40,14 @@
     }
   },
   {
+    "name": "Vanced Manager",
+    "baseUrl": "https://github.com/YTVanced/VancedManager/releases/download/{ver}/manager.apk",
+    "version": {
+      "url": "https://api.github.com/repos/YTVanced/VancedManager/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Bitwarden",
     "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
     "version": {
