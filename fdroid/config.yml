@@ -57,7 +57,7 @@ sdk_path: $ANDROID_HOME
 repo_url: https://jfronny.gitlab.io/fdroid/repo
 repo_name: JFronnys F-Droid Repository
 repo_icon: fdroid-icon.png
-repo_description: >-
+repo_description: |-
   This is a repository of apps to be used with F-Droid. Applications in this
   repository are either official binaries built by the original application
   developers, or are binaries built from source by the admin of this repo
