@@ -4,7 +4,7 @@ pages:
   stage: deploy
   before_script:
     - apt update
-    - apt install fdroidserver
+    - apt install -y fdroidserver
     - echo $KEYSTORE | base64 -d > fdroid/keystore.p12
     - 'echo "keystorepass: $KEYSTOREPASS" >> fdroid/config.yml'
     - 'echo "keypass: $KEYSTOREPASS" >> fdroid/config.yml'
