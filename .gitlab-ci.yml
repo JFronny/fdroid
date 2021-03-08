@@ -4,10 +4,8 @@ pages:
   stage: deploy
   before_script:
     - apt update
-    - apt install -y fdroidserver
+    - DEBIAN_FRONTEND=noninteractive apt install -y fdroidserver
     - echo $KEYSTORE | base64 -d > fdroid/keystore.p12
-    - 'echo "keystorepass: $KEYSTOREPASS" >> fdroid/config.yml'
-    - 'echo "keypass: $KEYSTOREPASS" >> fdroid/config.yml'
     - chmod a+x download.py
   script:
     - ./download.py
