@@ -34,10 +34,13 @@ def main():
 def download(download_url, forceFileName, ignore):
   if forceFileName is not None:
     fullForceFileName = "fdroid/repo/" + forceFileName
+    print(["wget", "--progress=dot:mega", "-N", "-O", fullForceFileName, download_url])
     retcode = subprocess.call(["wget", "--progress=dot:mega", "-N", "-O", fullForceFileName, download_url])
   elif download_url.endswith(".apk"):
+    print(["wget", "--progress=dot:mega", "-N", "-P", "fdroid/repo", download_url])
     retcode = subprocess.call(["wget", "--progress=dot:mega", "-N", "-P", "fdroid/repo", download_url])
   else:
+    print(["wget", "--progress=dot:mega", "-nc", "--content-disposition", "-P", "fdroid/repo", download_url])
     retcode = subprocess.call(["wget", "--progress=dot:mega", "-nc", "--content-disposition", "-P", "fdroid/repo", download_url])
   if retcode != 0:
     if forceFileName is not None:
