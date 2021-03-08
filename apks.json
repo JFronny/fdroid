@@ -48,6 +48,14 @@
     }
   },
   {
+    "name": "Magisk App",
+    "baseUrl": "https://github.com/topjohnwu/Magisk/releases/download/{ver}/Magisk-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/topjohnwu/Magisk/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Bitwarden",
     "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
     "version": {

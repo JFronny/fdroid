@@ -1,0 +1,19 @@
+Categories:
+  - System
+License: GPL-3.0
+AuthorName: John Wu
+WebSite: https://github.com/topjohnwu/Magisk
+SourceCode: https://github.com/topjohnwu/Magisk
+IssueTracker: https://github.com/topjohnwu/Magisk/issues
+Changelog: https://github.com/topjohnwu/Magisk/releases
+
+Summary: Magisk App
+Description: |-
+    Magisk is a suite of open source tools for customizing Android, supporting devices higher than Android 4.2. It covers fundamental parts of Android customization: root, boot scripts, SELinux patches, AVB2.0 / dm-verity / forceencrypt removals etc
+    Here are some feature highlights:
+    * MagiskSU: Provide root access to your device
+    * Magisk Modules: Modify read-only partitions by installing modules
+    * MagiskHide: Hide Magisk from root detections / system integrity checks
+
+AutoUpdateMode: None
+UpdateCheckMode: None
