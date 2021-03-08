@@ -22,5 +22,21 @@
       "url": "https://api.github.com/repos/M66B/FairEmail/releases/latest",
       "json": "tag_name"
     }
+  },
+  {
+    "name": "TachiyomiSY",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
+    "name": "Bitwarden",
+    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
+    "version": {
+      "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
+      "json": "tag_name"
+    }
   }
 ]

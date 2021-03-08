@@ -11,7 +11,7 @@ Donate: https://email.faircode.eu/pro/
 Bitcoin: 13nUbfsLUzK9Sr7ZJgDRHNR91BJMuDuJnf
 
 Summary: Fully featured email client. Neat, intuitive user interface. Privacy friendly
-Description: |-
+Description: |
     FairEmail is easy to setup and works with virtually all email providers, including Gmail, Outlook and Yahoo!
 
     Note that OAuth was not approved for the F-Droid build. For this you'll need to use the Play store version or the GitHub release.
