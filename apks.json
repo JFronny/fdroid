@@ -9,7 +9,7 @@
     "name": "CloudStream 2",
     "baseUrl": "https://github.com/LagradOst/CloudStream-2/releases/download/{ver}/{arch}-com.CloudStreamForms.CloudStreamForms.apk",
     "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
-    "forceFileName": "LagradOst/CloudStream-2-{arch}.apk",
+    "forceFileName": "CloudStream-2-{arch}.apk",
     "version": {
       "url": "https://api.github.com/repos/LagradOst/CloudStream-2/releases/latest",
       "json": "tag_name"
