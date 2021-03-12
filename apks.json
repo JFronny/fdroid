@@ -6,16 +6,6 @@
     "forceFileName": "org.mozilla.firefox-{arch}.apk"
   },
   {
-    "name": "TaiYaKi",
-    "baseUrl": "https://github.com/Michael24884/TaiYaKiAnime/releases/download/{ver}/app-{arch}-release.apk",
-    "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
-    "forceFileName": "TaiYaKi-{arch}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/Michael24884/TaiYaKiAnime/releases",
-      "json": [0, "tag_name"]
-    }
-  },
-  {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "forceFileName": "Signal-Android.apk",
