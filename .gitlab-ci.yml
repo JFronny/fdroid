@@ -4,7 +4,8 @@ pages:
   stage: deploy
   before_script:
     - apt update
-    - DEBIAN_FRONTEND=noninteractive apt install -y wget software-properties-common fdroidserver
+    - DEBIAN_FRONTEND=noninteractive apt install -y wget software-properties-common fdroidserver ca-certificates
+    - update-ca-certificates
     - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
     - chmod a+x download.py
     - chmod 600 fdroid/config.yml fdroid/keystore.p12
