@@ -1,0 +1,27 @@
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+WebSite: https://protonmail.com/
+SourceCode: https://github.com/ProtonMail/proton-mail-android
+IssueTracker: https://github.com/ProtonMail/proton-mail-android/issues
+
+Summary: The largest encrypted E-Mail service
+Description: |-
+    ProtonMail is the world’s largest encrypted email service with millions of users. The ProtonMail secure email app for Android brings easy-to-use email encryption to your mobile device by seamlessly integrating PGP end-to-end encryption. ProtonMail also provides a modern user interface with a full set of innovative features such as customizable swipe gestures and the ability to send expiring emails.
+
+    With the ProtonMail app, you can:
+
+    ★ Create a new protonmail.com email address with automatic PGP key creation and management
+
+    ★ Send and receive encrypted emails and attachments automatically
+
+    ★ Set timers for messages to self-destruct after sending
+
+    ★ Quickly organize emails with customizable swipe gestures and labels
+
+    ★ Get push notification of new emails
+    
+    ★ Send password protected encrypted emails to non-ProtonMail email addresses
+
+AutoUpdateMode: None
+UpdateCheckMode: None
