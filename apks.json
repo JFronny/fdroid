@@ -23,6 +23,14 @@
     }
   },
   {
+    "name": "Molly",
+    "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-production-{ver}-FOSS.apk",
+    "version": {
+      "url": "https://api.github.com/repos/mollyim/mollyim-android/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Fairmail",
     "baseUrl": "https://github.com/M66B/FairEmail/releases/download/{ver}/FairEmail-v{ver}-github-release.apk",
     "forceFileName": "Fairmail-Android.apk",
