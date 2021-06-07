@@ -49,9 +49,9 @@
   },
   {
     "name": "TachiyomiSY",
-    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSYPreview/releases/download/{ver}/TachiyomiSY_{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
+      "url": "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest",
       "json": "tag_name"
     }
   },
