@@ -12,7 +12,7 @@ pages:
     - (cd fdroid/repo && while read -r line || [ -n "$line" ]; do rm -f $line; done < ../../cleanup.txt)
     - ./download.py
     - cd fdroid
-    - update
+    - fdroid update
     - mkdir /fdroid
     - fdroid deploy
     - rm -rf /fdroid/archive
