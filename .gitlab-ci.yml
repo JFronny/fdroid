@@ -1,27 +1,28 @@
-image: ubuntu:hirsute
+image: wonko21/fdroidserver:latest
+
+before_script:
+  - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
+  - chmod a+x download.py
+  - chmod 600 fdroid/config.yml fdroid/keystore.p12
+  - mkdir -p fdroid/repo
 
 pages:
   stage: deploy
-  before_script:
-    - apt update
-    - DEBIAN_FRONTEND=noninteractive apt install -y wget software-properties-common fdroidserver ca-certificates
-    - update-ca-certificates
-    - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
-    - chmod a+x download.py
-    - chmod 600 fdroid/config.yml fdroid/keystore.p12
-    - mkdir -p fdroid/repo
   script:
+    - (cd fdroid/repo && while read -r line || [ -n "$line" ]; do rm -f $line; done < ../../cleanup.txt)
     - ./download.py
     - cd fdroid
-    - fdroid update
+    - update
+    - mkdir /fdroid
     - fdroid deploy
-    - cd .. && mkdir public && mv -v /fdroid/repo public
-    - mv index.html public/repo/
-    - echo "Repo size:" && du -h -d 3 public
-    - ls -al public/repo/
+    - rm -rf /fdroid/archive
+    - cd .. && mkdir public && mv -v /fdroid public
   artifacts:
     paths:
       - public
     expire_in: 2 days
   only:
     - master
+  cache:
+    paths:
+    - fdroid/repo/*.apk
