@@ -22,11 +22,13 @@ def main():
     print("Downloading " + apk["name"] + " " + ver)
     if "forceFileName" in apk:
       forceFileName = apk["forceFileName"]
+    if forceFileName is not None:
+      forceFileName = forceFileName.format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split("."))
     if "ignoreErrors" in apk:
       ignore = apk["ignoreErrors"]
     if "architectures" in apk:
       for arch in apk["architectures"]:
-        archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch, ver=ver)
+        archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch)
         download(apk["baseUrl"].format(arch=arch, ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), archForceFileName, ignore)
     else:
       download(apk["baseUrl"].format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), forceFileName, ignore)
