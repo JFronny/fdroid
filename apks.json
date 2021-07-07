@@ -15,7 +15,7 @@
   {
     "name": "CloudStream 2",
     "baseUrl": "https://github.com/LagradOst/CloudStream-2/releases/download/{ver}/arm64-v8a-com.CloudStreamForms.CloudStreamForms.apk",
-    "forceFileName": "CloudStream-2.apk",
+    "forceFileName": "CloudStream-2-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/LagradOst/CloudStream-2/releases/latest",
       "json": "tag_name"
@@ -24,7 +24,6 @@
   {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
-    "forceFileName": "Signal-Android.apk",
     "version": {
       "url": "https://updates.signal.org/android/latest.json",
       "json": "versionName"
@@ -41,7 +40,6 @@
   {
     "name": "Fairmail",
     "baseUrl": "https://github.com/M66B/FairEmail/releases/download/{ver}/FairEmail-v{ver}-github-release.apk",
-    "forceFileName": "Fairmail-Android.apk",
     "version": {
       "url": "https://api.github.com/repos/M66B/FairEmail/releases/latest",
       "json": "tag_name"
@@ -49,9 +47,9 @@
   },
   {
     "name": "TachiyomiSY",
-    "baseUrl": "https://github.com/jobobby04/TachiyomiSYPreview/releases/download/{ver}/TachiyomiSY_{ver}.apk",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest",
+      "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
       "json": "tag_name"
     }
   },
@@ -66,6 +64,7 @@
   {
     "name": "Vanced Manager",
     "baseUrl": "https://github.com/YTVanced/VancedManager/releases/download/{ver}/manager.apk",
+    "forceFileName": "vanced-manager-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/YTVanced/VancedManager/releases/latest",
       "json": "tag_name"
@@ -82,6 +81,7 @@
   {
     "name": "Bitwarden",
     "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
+    "forceFileName": "bitwarden-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
       "json": "tag_name"

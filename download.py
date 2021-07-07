@@ -26,7 +26,7 @@ def main():
       ignore = apk["ignoreErrors"]
     if "architectures" in apk:
       for arch in apk["architectures"]:
-        archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch)
+        archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch, ver=ver)
         download(apk["baseUrl"].format(arch=arch, ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), archForceFileName, ignore)
     else:
       download(apk["baseUrl"].format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), forceFileName, ignore)
