@@ -2,16 +2,16 @@ Categories:
   - Multimedia
   - Reading
 License: Apache-2.0
-AuthorName: Syer10
+AuthorName: Jmir1
 WebSite: https://tachiyomi.org
-SourceCode: https://github.com/jobobby04/TachiyomiSY
-IssueTracker: https://github.com/jobobby04/TachiyomiSY/issues
+SourceCode: https://github.com/jmir1/aniyomi
+IssueTracker: https://github.com/jmir1/aniyomi/issues
 Translation: https://hosted.weblate.org/engage/tachiyomi/?
-Changelog: https://github.com/jobobby04/TachiyomiSY/releases
+Changelog: https://github.com/jmir1/aniyomi/releases
 
-Summary: Manga reader but good
+Summary: Tachiyomi fork with anime support
 Description: |-
-    TachiyomiSY is a fork of Tachiyomi, a free and open source manga reader for Android.
+    Aniyomi is a fork of Tachiyomi, a free and open source manga reader for Android, that adds anime support
 
     Features include:
 

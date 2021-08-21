@@ -22,6 +22,15 @@
     }
   },
   {
+    "name": "CloudStream 3",
+    "baseUrl": "https://github.com/LagradOst/CloudStream-3/releases/download/{ver}/{ver_stripped}.apk",
+    "forceFileName": "CloudStream-3-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/LagradOst/CloudStream-3/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
@@ -50,6 +59,14 @@
     "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
+    "name": "Aniyomi",
+    "baseUrl": "https://github.com/jmir1/aniyomi/releases/download/{ver}/aniyomi-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/jmir1/aniyomi/releases/latest",
       "json": "tag_name"
     }
   },

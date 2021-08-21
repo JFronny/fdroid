@@ -1,0 +1,24 @@
+Categories:
+  - Multimedia
+  - Internet
+License: MIT
+AuthorName: LagradOst
+WebSite: https://github.com/LagradOst/CloudStream-3
+SourceCode: https://github.com/LagradOst/CloudStream-3
+IssueTracker: https://github.com/LagradOst/CloudStream-3/issues
+Changelog: https://github.com/LagradOst/CloudStream-3/releases
+
+Summary: Android streaming app for movies, tv-shows and anime
+Description: |-
+    CloudStream 2 is an android streaming app for movies, tv-shows and anime
+
+    FEATURES:
+
+    * AdFree, No ads whatsoever
+    * No tracking/analytics
+    * Bookmarks
+    * Download and stream movies, tv-shows and anime
+    * Chromecast
+
+AutoUpdateMode: None
+UpdateCheckMode: None
