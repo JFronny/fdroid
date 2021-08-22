@@ -1,0 +1,28 @@
+Categories:
+  - Reading
+License: MIT
+AuthorName: LagradOst
+WebSite: https://github.com/LagradOst/QuickNovel
+SourceCode: https://github.com/LagradOst/QuickNovel
+IssueTracker: https://github.com/LagradOst/QuickNovel/issues
+Changelog: https://github.com/LagradOst/QuickNovel/releases
+
+Summary: Android app for downloading novels
+Description: |-
+    Adfree FOSS Android app for downloading novels
+
+    Providers used:
+
+    * novelpassion.com
+    * bestlightnovel.com
+    * wuxiaworld.online
+    * royalroad.com
+    * wuxiaworld.site
+    * readlightnovel.org
+    * boxnovel.com
+    * comrademao.com
+    * lightnovelpub.com
+    * readnovelfull.com
+
+AutoUpdateMode: None
+UpdateCheckMode: None

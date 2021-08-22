@@ -31,6 +31,15 @@
     }
   },
   {
+    "name": "Quicknovel",
+    "baseUrl": "https://github.com/LagradOst/QuickNovel/releases/download/{ver}/{ver_stripped}.apk",
+    "forceFileName": "QuickNovel-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/LagradOst/QuickNovel/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
