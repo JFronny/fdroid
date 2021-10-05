@@ -57,7 +57,7 @@
   },
   {
     "name": "Fairmail",
-    "baseUrl": "https://github.com/M66B/FairEmail/releases/download/{ver}/FairEmail-v{ver}-github-release.apk",
+    "baseUrl": "https://github.com/M66B/FairEmail/releases/download/{ver}/FairEmail-v{ver}a-github-release.apk",
     "version": {
       "url": "https://api.github.com/repos/M66B/FairEmail/releases/latest",
       "json": "tag_name"
