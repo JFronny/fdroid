@@ -1,0 +1,18 @@
+Categories:
+  - Reading
+License: MIT
+AuthorName: Rajarshee Chatterjee
+WebSite: https://github.com/LNReader/lnreader
+SourceCode: https://github.com/LNReader/lnreader
+IssueTracker: https://github.com/LNReader/lnreader/issues
+Changelog: https://github.com/LNReader/lnreader/releases
+
+Summary: Light novel reader for Android
+Description: |-
+    LNReader is a Tachiyomi-like, free and open source light novel reader for Android
+
+    LNReader does not have any affiliation with the content providers available
+    Source requests should be created at LNReader/lnreader-sources
+
+AutoUpdateMode: None
+UpdateCheckMode: None

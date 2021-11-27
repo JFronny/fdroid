@@ -72,6 +72,14 @@
     }
   },
   {
+    "name": "LNReader",
+    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Aniyomi",
     "baseUrl": "https://github.com/jmir1/aniyomi/releases/download/{ver}/aniyomi-{ver}.apk",
     "version": {
