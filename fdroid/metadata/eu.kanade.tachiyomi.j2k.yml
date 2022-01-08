@@ -2,17 +2,17 @@ Categories:
   - Multimedia
   - Reading
 License: Apache-2.0
-AuthorName: Syer10
-WebSite: https://tachiyomi.org
-SourceCode: https://github.com/jobobby04/TachiyomiSY
-IssueTracker: https://github.com/jobobby04/TachiyomiSY/issues
-Translation: https://hosted.weblate.org/engage/tachiyomi/?
-Changelog: https://github.com/jobobby04/TachiyomiSY/releases
+AuthorName: Jays2Kings
+WebSite: https://github.com/Jays2Kings/tachiyomiJ2K
+SourceCode: https://github.com/Jays2Kings/tachiyomiJ2K
+IssueTracker: https://github.com/Jays2Kings/tachiyomiJ2K/issues
+Translation: https://hosted.weblate.org/engage/tachiyomi/
+Changelog: https://github.com/Jays2Kings/tachiyomiJ2K/releases
 
-Summary: Tachiyomi fork meant to push forward in the ways of usability and features
+Summary: Free and open source manga reader for Android 6.0 and above
 Description: |-
-    TachiyomiSY is a fork of Tachiyomi, a free and open source manga reader for Android.
-    It offers sevaral additional features
+    TachiyomiJ2K is a fork of Tachiyomi, a free and open source manga reader for Android.
+    It offers a new UI and sevaral additional features
 
     Features of Tachiyomi include:
 

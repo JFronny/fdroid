@@ -31,11 +31,11 @@
     }
   },
   {
-    "name": "Quicknovel",
-    "baseUrl": "https://github.com/LagradOst/QuickNovel/releases/download/{ver}/{ver_stripped}.apk",
-    "forceFileName": "QuickNovel-{ver}.apk",
+    "name": "Vanced Manager",
+    "baseUrl": "https://github.com/YTVanced/VancedManager/releases/download/{ver}/manager.apk",
+    "forceFileName": "vanced-manager-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/LagradOst/QuickNovel/releases/latest",
+      "url": "https://api.github.com/repos/YTVanced/VancedManager/releases/latest",
       "json": "tag_name"
     }
   },
@@ -72,10 +72,19 @@
     }
   },
   {
-    "name": "LNReader",
-    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
+    "name": "TachiyomiJ2K",
+    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
+      "url": "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
+    "name": "Neko",
+    "baseUrl": "https://github.com/CarlosEsco/Neko/releases/download/{ver}/neko.apk",
+    "forceFileName": "Neko-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/CarlosEsco/Neko/releases/latest",
       "json": "tag_name"
     }
   },
@@ -88,27 +97,27 @@
     }
   },
   {
+    "name": "LNReader",
+    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
+    "name": "Quicknovel",
+    "baseUrl": "https://github.com/LagradOst/QuickNovel/releases/download/{ver}/{ver_stripped}.apk",
+    "forceFileName": "QuickNovel-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/LagradOst/QuickNovel/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "NewPipe x SponsorBlock",
     "baseUrl": "https://github.com/polymorphicshade/NewPipe/releases/download/{ver}/newpipe_x_sponsorblock_{ver_stripped}.apk",
     "version": {
       "url": "https://api.github.com/repos/polymorphicshade/NewPipe/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
-    "name": "Vanced Manager",
-    "baseUrl": "https://github.com/YTVanced/VancedManager/releases/download/{ver}/manager.apk",
-    "forceFileName": "vanced-manager-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/YTVanced/VancedManager/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
-    "name": "Magisk App",
-    "baseUrl": "https://github.com/topjohnwu/Magisk/releases/download/{ver}/Magisk-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/topjohnwu/Magisk/releases/latest",
       "json": "tag_name"
     }
   },
