@@ -18,7 +18,10 @@ pages:
     - mkdir /fdroid
     - fdroid deploy
     - rm -rf /fdroid/archive
-    - cd .. && mkdir public && mv -v /fdroid/* public/
+    - cd ..
+    - mkdir public
+    - cp index.html public/repo/
+    - mv -v /fdroid/* public/
   artifacts:
     paths:
       - public
