@@ -20,8 +20,8 @@ pages:
     - rm -rf /fdroid/archive
     - cd ..
     - mkdir public
-    - cp index.html public/repo/
     - mv -v /fdroid/* public/
+    - cp index.html public/repo/
   artifacts:
     paths:
       - public
