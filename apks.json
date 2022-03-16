@@ -31,15 +31,6 @@
     }
   },
   {
-    "name": "Vanced Manager",
-    "baseUrl": "https://github.com/YTVanced/VancedManager/releases/download/{ver}/manager.apk",
-    "forceFileName": "vanced-manager-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/YTVanced/VancedManager/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
