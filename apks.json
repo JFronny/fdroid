@@ -72,12 +72,13 @@
   },
   {
     "name": "Neko",
-    "baseUrl": "https://github.com/CarlosEsco/Neko/releases/download/{ver}/neko.apk",
-    "forceFileName": "Neko-{ver}.apk",
+    "baseUrl": "https://github.com/CarlosEsco/Neko/releases/download/{ver}/neko-{arch}.apk",
+    "forceFileName": "neko-{ver}-{arch}.apk",
     "version": {
       "url": "https://api.github.com/repos/CarlosEsco/Neko/releases/latest",
       "json": "tag_name"
-    }
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86"]
   },
   {
     "name": "Aniyomi",
