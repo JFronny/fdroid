@@ -23,7 +23,7 @@ def main():
     if "forceFileName" in apk:
       forceFileName = apk["forceFileName"]
     if forceFileName is not None:
-      forceFileName = forceFileName.format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split("."))
+      forceFileName = forceFileName.format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split("."), arch="{arch}")
     if "ignoreErrors" in apk:
       ignore = apk["ignoreErrors"]
     if "architectures" in apk:
