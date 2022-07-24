@@ -1,4 +1,4 @@
-image: ubuntu:hirsute
+image: ubuntu:jammy
 
 before_script:
   - apt update
