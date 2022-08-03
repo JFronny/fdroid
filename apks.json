@@ -111,7 +111,7 @@
     "forceFileName": "YewDuct-{ver}.apk",
     "version": {
       "url": "https://jfronny.gitlab.io/YewDuct/version.json",
-      "json": ["elements", "versionName"]
+      "json": ["elements", 0, "versionName"]
     }
   },
   {
