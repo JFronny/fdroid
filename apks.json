@@ -106,6 +106,15 @@
     }
   },
   {
+    "name": "YewDuct",
+    "baseUrl": "https://jfronny.gitlab.io/YewDuct/app-release.apk",
+    "forceFileName": "YewDuct-{ver}.apk",
+    "version": {
+      "url": "https://jfronny.gitlab.io/YewDuct/version.json",
+      "json": ["elements", "versionName"]
+    }
+  },
+  {
     "name": "Bitwarden",
     "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
     "forceFileName": "bitwarden-{ver}.apk",
