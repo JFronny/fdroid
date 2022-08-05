@@ -1,14 +1,18 @@
 [
   {
-    "name": "Firefox",
-    "baseUrl": "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.release.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk",
-    "forceFileName": "org.mozilla.firefox.apk"
+    "name": "Aniyomi",
+    "baseUrl": "https://github.com/jmir1/aniyomi/releases/download/{ver}/aniyomi-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/jmir1/aniyomi/releases/latest",
+      "json": "tag_name"
+    }
   },
   {
-    "name": "ProtonMail",
-    "baseUrl": "https://github.com/ProtonMail/proton-mail-android/releases/download/{ver}/ProtonMail-{ver}.apk",
+    "name": "Bitwarden",
+    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
+    "forceFileName": "bitwarden-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/ProtonMail/proton-mail-android/releases/latest",
+      "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
       "json": "tag_name"
     }
   },
@@ -31,11 +35,16 @@
     }
   },
   {
-    "name": "Signal",
-    "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
+    "name": "Firefox",
+    "baseUrl": "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.release.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk",
+    "forceFileName": "org.mozilla.firefox.apk"
+  },
+  {
+    "name": "LNReader",
+    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
     "version": {
-      "url": "https://updates.signal.org/android/latest.json",
-      "json": "versionName"
+      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
+      "json": "tag_name"
     }
   },
   {
@@ -43,22 +52,6 @@
     "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}-FOSS.apk",
     "version": {
       "url": "https://api.github.com/repos/mollyim/mollyim-android/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
-    "name": "TachiyomiSY",
-    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
-    "name": "TachiyomiJ2K",
-    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest",
       "json": "tag_name"
     }
   },
@@ -73,18 +66,18 @@
     "architectures": ["arm64-v8a", "armeabi-v7a", "x86"]
   },
   {
-    "name": "Aniyomi",
-    "baseUrl": "https://github.com/jmir1/aniyomi/releases/download/{ver}/aniyomi-{ver}.apk",
+    "name": "NewPipe x SponsorBlock",
+    "baseUrl": "https://github.com/polymorphicshade/NewPipe/releases/download/{ver}/newpipe_x_sponsorblock_{ver_stripped}.apk",
     "version": {
-      "url": "https://api.github.com/repos/jmir1/aniyomi/releases/latest",
+      "url": "https://api.github.com/repos/polymorphicshade/NewPipe/releases/latest",
       "json": "tag_name"
     }
   },
   {
-    "name": "LNReader",
-    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
+    "name": "ProtonMail",
+    "baseUrl": "https://github.com/ProtonMail/proton-mail-android/releases/download/{ver}/ProtonMail-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
+      "url": "https://api.github.com/repos/ProtonMail/proton-mail-android/releases/latest",
       "json": "tag_name"
     }
   },
@@ -98,10 +91,26 @@
     }
   },
   {
-    "name": "NewPipe x SponsorBlock",
-    "baseUrl": "https://github.com/polymorphicshade/NewPipe/releases/download/{ver}/newpipe_x_sponsorblock_{ver_stripped}.apk",
+    "name": "Signal",
+    "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/polymorphicshade/NewPipe/releases/latest",
+      "url": "https://updates.signal.org/android/latest.json",
+      "json": "versionName"
+    }
+  },
+  {
+    "name": "TachiyomiJ2K",
+    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
+    "name": "TachiyomiSY",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
       "json": "tag_name"
     }
   },
@@ -112,15 +121,6 @@
     "version": {
       "url": "https://jfronny.gitlab.io/YewDuct/version.json",
       "json": ["elements", 0, "versionName"]
-    }
-  },
-  {
-    "name": "Bitwarden",
-    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
-    "forceFileName": "bitwarden-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
-      "json": "tag_name"
     }
   }
 ]
