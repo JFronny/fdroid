@@ -23,10 +23,10 @@
   },
   {
     "name": "CloudStream 3",
-    "baseUrl": "https://github.com/LagradOst/CloudStream-3/releases/download/{ver}/{ver_stripped}.apk",
+    "baseUrl": "https://github.com/rereleased/release/releases/download/{ver}/{ver_stripped}.apk",
     "forceFileName": "CloudStream-3-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/LagradOst/CloudStream-3/releases/latest",
+      "url": "https://api.github.com/repos/rereleased/release/releases/latest",
       "json": "tag_name"
     }
   },
