@@ -1,13 +1,12 @@
 Categories:
   - Multimedia
   - Reading
-License: Apache-2.0
+License: GPL-3.0-or-later
 AuthorName: Shivam
-WebSite: https://tachiyomi.org
-SourceCode: https://github.com/jmir1/aniyomi
-IssueTracker: https://github.com/jmir1/aniyomi/issues
-Translation: https://hosted.weblate.org/engage/tachiyomi/?
-Changelog: https://github.com/jmir1/aniyomi/releases
+WebSite: https://saikou.me/
+SourceCode: https://github.com/saikou-app/saikou
+IssueTracker: https://github.com/saikou-app/saikou/issues
+Changelog: https://github.com/saikou-app/saikou/releases
 
 Summary: An Android Anilist only client, which lets you stream & download Anime & Manga
 Description: |-
