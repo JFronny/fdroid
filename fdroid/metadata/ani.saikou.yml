@@ -1,0 +1,26 @@
+Categories:
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Shivam
+WebSite: https://tachiyomi.org
+SourceCode: https://github.com/jmir1/aniyomi
+IssueTracker: https://github.com/jmir1/aniyomi/issues
+Translation: https://hosted.weblate.org/engage/tachiyomi/?
+Changelog: https://github.com/jmir1/aniyomi/releases
+
+Summary: An Android Anilist only client, which lets you stream & download Anime & Manga
+Description: |-
+    Saikou is crafted based on simplistic yet state-of-the-art elegance. It is an Anilist only client, which also lets you stream-download Anime & Manga.
+
+    Features include:
+
+    * Easy and functional way to both, watch anime and read manga, Ad Free.
+    * A completely open source app with a nice UI & Animations :)
+    * The most Efficient scraping for anime and manga from multiple sources. (Spoiler Alert : No web-views were harmed)
+    * Synchronize anime and manga real-time with AniList. Easily categorise anime and manga based on your current status. (Powered by AniList)
+    * Find all shows using thoroughly and frequently updated list of all trending, popular and ongoing anime based on scores.
+    * View extensive details about anime shows, movies and manga titles. It also features ability to countdown to the next episode of airing anime. (Powered by AniList & MyAnimeList)
+
+AutoUpdateMode: None
+UpdateCheckMode: None
