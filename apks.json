@@ -94,8 +94,8 @@
     "name": "Saikou",
     "baseUrl": "https://github.com/saikou-app/saikou/releases/download/{ver}/Saikou-{ver_stripped}.apk",
     "version": {
-      "url": "https://api.github.com/repos/saikou-app/saikou/releases/latest",
-      "json": "tag_name"
+      "url": "https://api.github.com/repos/saikou-app/saikou/releases",
+      "json": [0, "tag_name"]
     }
   },
   {
