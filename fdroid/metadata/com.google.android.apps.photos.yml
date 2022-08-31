@@ -1,0 +1,17 @@
+Categories:
+  - Internet
+  - Multimedia
+License: MIT
+AuthorName: Johannes Frohnmeyer
+SourceCode: https://gitlab.com/JFronny/gcamphotosproxy
+IssueTracker: https://gitlab.com/JFronny/gcamphotosproxy/-/issues
+Changelog: https://gitlab.com/JFronny/gcamphotosproxy/-/commits/master/
+
+Summary: Google Photos Proxy for use with GCam
+Description: |-
+    GCamPhotosProxy fixes the gallery icon in GCam by registring an activity for google photos which launches the native gallery app.
+    If this application is listed as installed even though you did not do so, you can safely ignore it.
+    Since this application uses the google photos app id, F-Droid may recognize the original google photos app instead.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
