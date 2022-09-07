@@ -27,10 +27,10 @@
   },
   {
     "name": "CloudStream 3",
-    "baseUrl": "https://github.com/rereleased/release/releases/download/{ver}/{ver_stripped}.apk",
+    "baseUrl": "https://github.com/recloudstream/cloudstream/releases/download/{ver}/{ver_stripped}.apk",
     "forceFileName": "CloudStream-3-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/rereleased/release/releases/latest",
+      "url": "https://api.github.com/repos/recloudstream/cloudstream/releases/latest",
       "json": "tag_name"
     }
   },

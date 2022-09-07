@@ -3,10 +3,10 @@ Categories:
   - Internet
 License: MIT
 AuthorName: LagradOst
-WebSite: https://github.com/LagradOst/CloudStream-3
-SourceCode: https://github.com/LagradOst/CloudStream-3
-IssueTracker: https://github.com/LagradOst/CloudStream-3/issues
-Changelog: https://github.com/LagradOst/CloudStream-3/releases
+WebSite: https://recloudstream.github.io/
+SourceCode: https://github.com/recloudstream/cloudstream
+IssueTracker: https://github.com/recloudstream/cloudstream/issues
+Changelog: https://github.com/recloudstream/cloudstream/releases
 
 Summary: Android app for streaming and downloading Movies, TV-Series and Anime.
 Description: |-
