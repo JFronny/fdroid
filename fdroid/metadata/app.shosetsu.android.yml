@@ -1,0 +1,22 @@
+Categories:
+  - Reading
+License: GPL-3.0-only
+AuthorName: Doomsdayrs
+WebSite: https://shosetsu.app
+SourceCode: https://gitlab.com/shosetsuorg/shosetsu
+IssueTracker: https://gitlab.com/shosetsuorg/shosetsu/issues
+Changelog: https://gitlab.com/shosetsuorg/shosetsu/releases
+
+Summary: An android application for reading novels
+Description: |-
+    The Free & Open Source Android Application for reading (Light) Novels!
+
+    Capabilities:
+    
+    * Many sources to read from!
+    * Add the ones you like to your library!
+    * Single button press to get all the latest chapters!
+    * Settings that make you wonder what happened!
+    * Completely customizable reader! (Using HTML reader)
+    * Awesome UI!
+    * Fast fast fast!
