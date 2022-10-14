@@ -27,12 +27,7 @@
   },
   {
     "name": "CloudStream 3",
-    "baseUrl": "https://github.com/recloudstream/cloudstream/releases/download/{ver}/{ver_stripped}.apk",
-    "forceFileName": "CloudStream-3-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/recloudstream/cloudstream/releases/latest",
-      "json": "tag_name"
-    }
+    "baseUrl": "https://akbvopenfl1.hopto.org/pub/CloudStream-3-v3.1.5.apk"
   },
   {
     "name": "Firefox",
