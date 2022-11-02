@@ -30,6 +30,10 @@
     "baseUrl": "https://akbvopenfl1.hopto.org/pub/CloudStream-3-v3.1.5.apk"
   },
   {
+    "name": "CloudStream 3 Prerelease",
+    "baseUrl": "https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"
+  },
+  {
     "name": "Firefox",
     "baseUrl": "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.release.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk",
     "forceFileName": "org.mozilla.firefox.apk"
