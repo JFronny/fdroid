@@ -8,6 +8,14 @@
     }
   },
   {
+    "name": "Auxio.JF",
+    "baseUrl": "https://github.com/JFronny/Auxio.JF/releases/download/{ver}/Auxio_{ver_stripped}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/JFronny/Auxio.JF/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Bitwarden",
     "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden.apk",
     "forceFileName": "bitwarden-{ver}.apk",
