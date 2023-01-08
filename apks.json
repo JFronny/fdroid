@@ -128,6 +128,15 @@
     }
   },
   {
+    "name": "Tachiyomi",
+    "baseUrl": "https://github.com/tachiyomiorg/tachiyomi/releases/download/{ver}/tachiyomi-{arch}-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/tachiyomiorg/tachiyomi/releases/latest",
+      "json": "tag_name"
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]
+  },
+  {
     "name": "TachiyomiJ2K",
     "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
     "version": {

@@ -1,0 +1,29 @@
+Categories:
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Javier Tomás
+WebSite: https://tachiyomi.org
+SourceCode: https://github.com/tachiyomiorg/tachiyomi
+IssueTracker: https://github.com/tachiyomiorg/tachiyomi/issues
+Translation: https://hosted.weblate.org/engage/tachiyomi/?
+Changelog: https://github.com/tachiyomiorg/tachiyomi/releases
+
+AutoName: Tachiyomi
+Summary: Tachiyomi fork meant to push forward in the ways of usability and features
+Description: |-
+    Tachiyomi is a free and open source manga reader for Android.
+
+    Features include:
+
+    * Online reading from sources such as MangaDex, MangaSee, Mangakakalot, and more
+    * Local reading of downloaded manga
+    * A configurable reader with multiple viewers, reading directions and other settings.
+    * MyAnimeList, AniList, Kitsu, Shikimori, and Bangumi support
+    * Categories to organize your library
+    * Light and dark themes
+    * Schedule updating your library for new chapters
+    * Create backups locally to read offline or to your desired cloud servic
+
+AutoUpdateMode: None
+UpdateCheckMode: None
