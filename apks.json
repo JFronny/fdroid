@@ -146,11 +146,13 @@
   },
   {
     "name": "TachiyomiSY",
-    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY_{ver}.apk",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY-{arch}.apk",
+    "forceFileName": "TachiyomiSY-{ver}-{arch}.apk",
     "version": {
       "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
       "json": "tag_name"
-    }
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]
   },
   {
     "name": "YewDuct",
