@@ -146,8 +146,7 @@
   },
   {
     "name": "TachiyomiSY",
-    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY-{arch}.apk",
-    "forceFileName": "TachiyomiSY-{ver}-{arch}.apk",
+    "baseUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/{ver}/TachiyomiSY-{arch}-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
       "json": "tag_name"
