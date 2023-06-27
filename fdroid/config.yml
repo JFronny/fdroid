@@ -58,10 +58,11 @@ repo_url: https://jfronny.gitlab.io/fdroid/repo
 repo_name: JFronnys F-Droid Repository
 repo_icon: fdroid-icon.png
 repo_description: |-
-  This is a repository of apps to be used with F-Droid. Applications in this
-  repository are either official binaries built by the original application
-  developers, or are binaries built from source by the admin of this repo
-  using the tools on https://gitlab.com/u/fdroid.
+  This is a repository of open-source apps to be used with F-Droid.
+  Applications in this repository are official binaries built by the
+  original application developers. I do not own the applications or any
+  content available through those applications and simply provide a
+  common location for downloading them.
 
 # As above, but for the archive repo.
 # archive_older sets the number of versions kept in the main repo, with all
