@@ -1,0 +1,26 @@
+Categories:
+  - Multimedia
+  - Internet
+License: BSD-3-Clause
+AuthorName: Nauval Rizky
+WebSite: https://github.com/nullxception/boorusphere
+SourceCode: https://github.com/nullxception/boorusphere
+IssueTracker: https://github.com/nullxception/boorusphere/issues
+Changelog: https://github.com/nullxception/boorusphere/blob/main/CHANGELOG.md
+
+Summary: Simple, content-focused booru viewer for Android
+Description: |-
+    Features:
+
+    * Simple and intuitive UI
+    * Support various booru-based imageboards
+    * Support playing videos and animated images (GIF, WEBM)
+    * Save favorites content
+    * Search with tag suggestion
+    * Download images and videos
+    * Block tags from search result
+    * Backup and restore data
+    * and many more ...
+
+AutoUpdateMode: None
+UpdateCheckMode: None

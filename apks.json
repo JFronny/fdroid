@@ -25,6 +25,15 @@
     }
   },
   {
+    "name": "Boorusphere",
+    "baseUrl": "https://github.com/nullxception/boorusphere/releases/download/{ver}/boorusphere-{ver}-{arch}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/nullxception/boorusphere/releases/latest",
+      "json": "tag_name"
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+  },
+  {
     "name": "CloudStream 3",
     "baseUrl": "https://github.com/recloudstream/cloudstream/releases/download/{ver}/{ver_stripped}.apk",
     "forceFileName": "CloudStream-3-{ver}.apk",
