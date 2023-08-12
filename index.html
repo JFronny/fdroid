@@ -191,7 +191,7 @@
         </div>
     </main>
     <script>
-        fetch("https://gitlab.com/JFronny/fdroid/repo/index.xml")
+        fetch("https://jfronny.gitlab.io/fdroid/repo/index.xml")
             .then(r=>r.text())
             .then(str=> new window.DOMParser().parseFromString(str, "text/xml"))
             .then(data=> {
