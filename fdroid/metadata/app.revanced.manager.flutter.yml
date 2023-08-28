@@ -1,0 +1,19 @@
+Categories:
+  - Multimedia
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: ReVanced
+WebSite: https://revanced.app/
+SourceCode: https://github.com/ReVanced/revanced-manager
+IssueTracker: https://github.com/ReVanced/revanced-manager/issues
+Changelog: https://github.com/ReVanced/revanced-manager/releases
+Translation: https://translate.revanced.app/
+
+Summary: Application to use ReVanced on Android
+Description: |-
+    Continuing the legacy of Vanced.
+
+    Customize your mobile experience through ReVanced by applying patches to your applications.
+
+AutoUpdateMode: None
+UpdateCheckMode: None

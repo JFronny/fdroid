@@ -112,6 +112,14 @@
     }
   },
   {
+    "name": "ReVanced Manager",
+    "baseUrl": "https://github.com/ReVanced/revanced-manager/releases/download/{ver}/revanced-manager-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/ReVanced/revanced-manager/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Saikou",
     "baseUrl": "https://github.com/saikou-app/saikou/releases/download/{ver}/Saikou-{ver_stripped}.apk",
     "version": {
