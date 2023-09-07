@@ -14,3 +14,5 @@ Description: |
 
     How do you stay safe?
     Security experts recommend that you use a different, randomly generated password for every online account that you create. But how are you supposed to remember and keep up with that many passwords? Bitwarden helps you create and manage secure passwords so that you can get back to enjoying your life online.
+
+AllowedAPKSigningKeys: de6ec91431557995297bf3e65bc80349bc603a04708160618c86bc9994171c90

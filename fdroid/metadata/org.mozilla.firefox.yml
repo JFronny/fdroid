@@ -11,3 +11,4 @@ Description: Firefox browser for Android
 
 AutoUpdateMode: None
 UpdateCheckMode: None
+AllowedAPKSigningKeys: a78b62a5165b4494b2fead9e76a280d22d937fee6251aece599446b2ea319b04

@@ -52,3 +52,4 @@ Description: |-
 
 AutoUpdateMode: None
 UpdateCheckMode: None
+AllowedAPKSigningKeys: 39bd8e0f54c8ab87ac21c07a15b30fc95cdff1d25d75df029d523b18df864b79
