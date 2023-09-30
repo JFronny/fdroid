@@ -114,11 +114,7 @@
   },
   {
     "name": "Saikou",
-    "baseUrl": "https://github.com/saikou-app/saikou/releases/download/{ver}/Saikou-{ver_stripped}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/saikou-app/saikou/releases",
-      "json": [0, "tag_name"]
-    }
+    "baseUrl": "https://akbvopenfl1.hopto.org/pub/Saikou-1.2.5.5245fbb.apk"
   },
   {
     "name": "Signal",
