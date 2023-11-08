@@ -2,15 +2,15 @@ Categories:
   - Multimedia
   - Reading
 License: GPL-3.0-or-later
-AuthorName: Shivam
-WebSite: https://saikou.me/
-SourceCode: https://github.com/saikou-app/saikou
-IssueTracker: https://github.com/saikou-app/saikou/issues
-Changelog: https://github.com/saikou-app/saikou/releases
+AuthorName: rebelonion
+WebSite: https://github.com/rebelonion/Dantotsu
+SourceCode: https://github.com/rebelonion/Dantotsu
+IssueTracker: https://github.com/rebelonion/Dantotsu/issues
+Changelog: https://github.com/rebelonion/Dantotsu/releases
 
 Summary: An Android Anilist only client, which lets you stream & download Anime & Manga
 Description: |-
-    Saikou is crafted based on simplistic yet state-of-the-art elegance. It is an Anilist only client, which also lets you stream-download Anime & Manga.
+    A successor to Saikou, Dantotsu is crafted based on simplistic yet state-of-the-art elegance. It is an Anilist only client, which also lets you stream-download Anime & Manga.
 
     Features include:
 
@@ -23,4 +23,4 @@ Description: |-
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-AllowedAPKSigningKeys: 634d8aab2a8539cd6db942e9d29b3623a0e35148f353a12d8ef1f6085bb43dd8
+AllowedAPKSigningKeys: 256cd9d8641b77b3e10958a2120a2e9ddaa2cc87351f48010d94e4b5059d7492

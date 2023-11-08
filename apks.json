@@ -40,6 +40,15 @@
     "baseUrl": "https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"
   },
   {
+    "name": "Dantotsu",
+    "baseUrl": "https://github.com/rebelonion/Dantotsu/releases/download/{ver}/app-release.apk",
+    "forceFileName": "dantotsu-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/rebelonion/Dantotsu/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Firefox",
     "baseUrl": "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.release.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk",
     "forceFileName": "org.mozilla.firefox.apk"
@@ -111,10 +120,6 @@
       "url": "https://api.github.com/repos/ReVanced/revanced-manager/releases/latest",
       "json": "tag_name"
     }
-  },
-  {
-    "name": "Saikou",
-    "baseUrl": "https://akbvopenfl1.hopto.org/pub/Saikou-1.2.5.5245fbb.apk"
   },
   {
     "name": "Signal",
