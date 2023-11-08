@@ -71,6 +71,18 @@
     }
   },
   {
+    "name": "MensaApp",
+    "baseUrl": "https://github.com/kronos-et-al/MensaApp/releases/download/{ver}/{source_file_name}",
+    "version": {
+      "url": "https://api.github.com/repos/kronos-et-al/MensaApp/releases/latest",
+      "json": "tag_name"
+    },
+    "sourceFileName": {
+      "url": "https://api.github.com/repos/kronos-et-al/MensaApp/releases/latest",
+      "json": ["assets", 0, "name"]
+    }
+  },
+  {
     "name": "Molly",
     "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}-FOSS.apk",
     "version": {

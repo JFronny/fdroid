@@ -1,0 +1,27 @@
+Categories:
+  - Internet
+  - Sports & Health
+License: MIT
+AuthorName: kronos et al
+WebSite: https://mensa-ka.de/
+SourceCode: https://github.com/kronos-et-al/MensaApp
+IssueTracker: https://github.com/kronos-et-al/MensaApp/issues
+Changelog: https://github.com/kronos-et-al/MensaApp/releases
+
+Summary: Application for communication and collective exchange of menu information in university catering facilities
+Description: |-
+    A successor to Saikou, Dantotsu is crafted based on simplistic yet state-of-the-art elegance. It is an Anilist only client, which also lets you stream-download Anime & Manga.
+
+    Features:
+
+    * Access meal plans for all canteens of the Studierendenwerk Karlsruhe in Karlsruhe and Pforzheim (Germany)
+    * View and add images to meal to better judge what you want to eat
+    * Rate meals to help others decide on their lunch
+    * View prices for students, employees, pupils and guests
+    * Filter meals by type (vegetarian, vegan, ...), price, allergens and more
+    * Choose your way of life: light or dark mode
+    * Mark meals as favorites to highlight them locally
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 56d237ffcdecf0532d3bfd7045ab6a2d54a7b77fa0ef7866c105e214d576b101

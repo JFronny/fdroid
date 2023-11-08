@@ -10,28 +10,42 @@ def main():
   with open("apks.json") as file:
     apks = json.load(file)
   for apk in apks:
-    ver = ""
+    fmt={}
     forceFileName = None
     ignore = False
     if "version" in apk:
       verObj = apk["version"]
       if "json" in verObj:
-        ver = get_version_json(verObj["url"], verObj["json"])
+        fmt["ver"] = get_version_json(verObj["url"], verObj["json"])
       elif "regex" in verObj:
-        ver = get_version_regex(verObj["url"], verObj["regex"])
-    print("Downloading " + apk["name"] + " " + ver)
+        fmt["ver"] = get_version_regex(verObj["url"], verObj["regex"])
+      fmt["ver_stripped"] = fmt["ver"].lstrip("v")
+      fmt["ver_splitted"] = fmt["ver"].split(".")
+      print("Downloading " + apk["name"] + " " + fmt["ver"])
+    else:
+      print("Downloading " + apk["name"])
+    if "sourceFileName" in apk:
+      sfnObj = apk["sourceFileName"]
+      if "json" in sfnObj:
+        fmt["source_file_name"] = get_version_json(sfnObj["url"], sfnObj["json"])
+      elif "regex" in sfnObj:
+        fmt["source_file_name"] = get_version_regex(sfnObj["url"], sfnObj["regex"])
     if "forceFileName" in apk:
       forceFileName = apk["forceFileName"]
     if forceFileName is not None:
-      forceFileName = forceFileName.format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split("."), arch="{arch}")
+      fmt["arch"] = "{arch}"
+      forceFileName = forceFileName.format_map(fmt)
+      fmt["force_file_name"] = forceFileName
+      del fmt["arch"]
     if "ignoreErrors" in apk:
       ignore = apk["ignoreErrors"]
     if "architectures" in apk:
       for arch in apk["architectures"]:
         archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch)
-        download(apk["baseUrl"].format(arch=arch, ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), archForceFileName, ignore)
+        fmt["arch"] = arch
+        download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore)
     else:
-      download(apk["baseUrl"].format(ver=ver, ver_stripped=ver.lstrip("v"), ver_splitted=ver.split(".")), forceFileName, ignore)
+      download(apk["baseUrl"].format_map(fmt), forceFileName, ignore)
 
 def download(download_url, forceFileName, ignore):
   if forceFileName is not None:
