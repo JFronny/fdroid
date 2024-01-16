@@ -85,9 +85,9 @@
   },
   {
     "name": "Mihon",
-    "baseUrl": "https://github.com/mihon/releases/releases/download/{ver}/tachiyomi-{arch}-{ver}.apk",
+    "baseUrl": "https://github.com/mihonapp/mihon/releases/download/{ver}/mihon-{arch}-{ver}.apk",
     "version": {
-      "url": "https://api.github.com/repos/mihon/releases/releases/latest",
+      "url": "https://api.github.com/repos/mihonapp/mihon/releases/latest",
       "json": "tag_name"
     },
     "architectures": ["arm64-v8a", "x86_64"]
