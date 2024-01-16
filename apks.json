@@ -170,15 +170,6 @@
     "architectures": ["arm64-v8a", "x86_64"]
   },
   {
-    "name": "Transportr",
-    "baseUrl": "https://github.com/grote/Transportr/releases/download/{ver}/app-release.apk",
-    "forceFileName": "Transportr-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/grote/Transportr/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
     "name": "YewDuct",
     "baseUrl": "https://jfronny.gitlab.io/YewDuct/app-release.apk",
     "forceFileName": "YewDuct-{ver}.apk",
