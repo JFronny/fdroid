@@ -1,0 +1,29 @@
+Categories:
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Javier Tomás
+WebSite: https://mihon.app/
+SourceCode: https://github.com/mihonapp/mihon
+IssueTracker: https://github.com/mihonapp/mihon/issues
+Changelog: https://github.com/mihonapp/mihon/releases
+
+AutoName: Mihon
+Summary: Free and open source manga reader for Android
+Description: |-
+    Mihon is a free and open source manga reader for Android.
+
+    Features include:
+
+    * Online reading from a variety of sources
+    * Local reading of downloaded content
+    * A configurable reader with multiple viewers, reading directions and other settings.
+    * MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, and Bangumi support
+    * Categories to organize your library
+    * Light and dark themes
+    * Schedule updating your library for new chapters
+    * Create backups locally to read offline or to your desired cloud service
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2

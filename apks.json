@@ -84,6 +84,15 @@
     }
   },
   {
+    "name": "Mihon",
+    "baseUrl": "https://github.com/mihon/releases/releases/download/{ver}/tachiyomi-{arch}-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/mihon/releases/releases/latest",
+      "json": "tag_name"
+    },
+    "architectures": ["arm64-v8a", "x86_64"]
+  },
+  {
     "name": "Molly",
     "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}-FOSS.apk",
     "version": {

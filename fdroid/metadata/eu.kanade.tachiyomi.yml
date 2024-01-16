@@ -10,7 +10,7 @@ Translation: https://hosted.weblate.org/engage/tachiyomi/?
 Changelog: https://github.com/tachiyomiorg/tachiyomi/releases
 
 AutoName: Tachiyomi
-Summary: Tachiyomi fork meant to push forward in the ways of usability and features
+Summary: Free and open source manga reader for Android
 Description: |-
     Tachiyomi is a free and open source manga reader for Android.
 
@@ -23,7 +23,7 @@ Description: |-
     * Categories to organize your library
     * Light and dark themes
     * Schedule updating your library for new chapters
-    * Create backups locally to read offline or to your desired cloud servic
+    * Create backups locally to read offline or to your desired cloud service
 
 AutoUpdateMode: None
 UpdateCheckMode: None
