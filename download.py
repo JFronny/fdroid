@@ -16,13 +16,17 @@ def main():
       versioncache = json.load(file)
     if "format" not in versioncache or versioncache["format"] != 2:
       print("Found outdated version cache, creating new")
-      versioncache = {"format": 2, "apps": {}}
+      versioncache = {"format": 2, "apps": {}, "volatile_paths": []}
       rmtree("fdroid/repo")
     else:
       print("Found version cache, using")
   else:
     print("Version cache not found, creating")
-    versioncache = {"format": 2, "apps": {}}
+    versioncache = {"format": 2, "apps": {}, "volatile_paths": []}
+  if not "volatile_paths" in versioncache:
+    versioncache["volatile_paths"] = []
+  remove_all(versioncache["volatile_paths"])
+  versioncache["volatile_paths"] = []
   os.makedirs("fdroid/repo", exist_ok=True)
   apps_cache = versioncache["apps"]
   for apk in apks:
@@ -46,9 +50,7 @@ def main():
           continue
         else:
           print("Updating " + apk["name"] + ": new version is available")
-          for path in apps_cache[apk["name"]]["paths"]:
-            if os.path.isfile(path):
-              os.remove(path)
+          remove_all(apps_cache[apk["name"]]["paths"])
           apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
       else:
         print("Adding " + apk["name"] + ": new application")
@@ -56,7 +58,7 @@ def main():
       app_paths = apps_cache[apk["name"]]["paths"]
       print("Downloading " + apk["name"] + " " + fmt["ver"])
     else:
-      app_paths = []
+      app_paths = versioncache["volatile_paths"]
       print("Downloading " + apk["name"])
     if "sourceFileName" in apk:
       sfnObj = apk["sourceFileName"]
@@ -87,20 +89,11 @@ def main():
 def download(download_url, fileName, ignore, paths):
   try:
     response = requests.get(download_url, allow_redirects=True, stream=True)
-    chunk_size = 8192
     if fileName is None:
-      if download_url.endswith(".apk"):
-        fileName = os.path.basename(urlparse(download_url).path)
-      elif "Content-Disposition" in response.headers:
-        match = re.search('filename="(.+)"', response.headers["Content-Disposition"])
-        if match:
-          fileName = match.group(1)
-        else:
-          raise Exception("Could not get filename from content disposition of " + download_url)
-      else:
-        raise Exception("Could not get filename from " + download_url)
+      fileName = identify_file_name(download_url, response)
     fileName = "fdroid/repo/" + fileName
     print("Using target file " + fileName)
+    chunk_size = 8192
     with open(fileName, 'wb') as file:
       for chunk in response.iter_content(chunk_size):
         file.write(chunk)
@@ -119,6 +112,18 @@ def download(download_url, fileName, ignore, paths):
       print("Ignoring error:")
       print(e)
 
+def identify_file_name(download_url, response):
+  if download_url.endswith(".apk"):
+    return os.path.basename(urlparse(download_url).path)
+  elif "Content-Disposition" in response.headers:
+    match = re.search('filename="(.+)"', response.headers["Content-Disposition"])
+    if match:
+      return match.group(1)
+    else:
+      raise Exception("Could not get filename from content disposition of " + download_url)
+  else:
+    raise Exception("Could not get filename from " + download_url)
+
 def get_version_regex(url, query):
   request = requests.get(url)
   regex = re.search(query, request.text)
@@ -132,6 +137,13 @@ def get_version_json(url, query):
   for query_part in query:
     version = version[query_part]
   return version
+
+def remove_all(paths):
+  for path in paths:
+    if os.path.isfile(path):
+      os.remove(path)
+    if os.path.isdir(path):
+      rmtree(path)
 
 if __name__ == "__main__":
   main()
