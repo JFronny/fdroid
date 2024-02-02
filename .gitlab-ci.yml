@@ -21,6 +21,11 @@ pages:
     - mkdir public
     - mv -v /fdroid/* public/
     - cp index.html public/repo/
+  cache:
+    key: repo-cache
+    paths:
+      - fdroid/repo/*
+      - versioncache.json
   artifacts:
     paths:
       - public

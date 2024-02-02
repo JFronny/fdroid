@@ -9,6 +9,11 @@ import subprocess
 def main():
   with open("apks.json") as file:
     apks = json.load(file)
+  if os.path.isfile("versioncache.json"):
+    with open("versioncache.json") as file:
+      versioncache = json.load(file)
+  else:
+    versioncache = {}
   for apk in apks:
     fmt={}
     forceFileName = None
@@ -21,6 +26,11 @@ def main():
         fmt["ver"] = get_version_regex(verObj["url"], verObj["regex"])
       fmt["ver_stripped"] = fmt["ver"].lstrip("v")
       fmt["ver_splitted"] = fmt["ver"].split(".")
+      if apk["name"] in versioncache and versioncache[apk["name"]] == fmt["ver"]:
+        print("Skipping " + apk["name"] + ": already up to date")
+        continue
+      else:
+        versioncache[apk["name"]] = fmt["ver"]
       print("Downloading " + apk["name"] + " " + fmt["ver"])
     else:
       print("Downloading " + apk["name"])
@@ -46,6 +56,8 @@ def main():
         download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore)
     else:
       download(apk["baseUrl"].format_map(fmt), forceFileName, ignore)
+  with open("versioncache.json", 'w') as file:
+    json.dump(versioncache, file)
 
 def download(download_url, forceFileName, ignore):
   if forceFileName is not None:
