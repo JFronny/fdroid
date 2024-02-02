@@ -16,10 +16,10 @@ pages:
     - ${fdroidserver}/fdroid update
     - mkdir /fdroid
     - ${fdroidserver}/fdroid deploy
-    - rm -rf /fdroid/archive
     - cd ..
     - mkdir public
-    - mv -v /fdroid/* public/
+    - cp -vr /fdroid/* public/
+    - rm -rf /public/archive
     - cp index.html public/repo/
   cache:
     key: repo-cache

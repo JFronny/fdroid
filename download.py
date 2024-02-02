@@ -14,15 +14,15 @@ def main():
   if os.path.isfile("versioncache.json"):
     with open("versioncache.json") as file:
       versioncache = json.load(file)
-    if "format" not in versioncache or versioncache["format"] != 1:
+    if "format" not in versioncache or versioncache["format"] != 2:
       print("Found outdated version cache, creating new")
-      versioncache = {"format": 1, "apps": []}
+      versioncache = {"format": 2, "apps": {}}
       rmtree("fdroid/repo")
     else:
       print("Found version cache, using")
   else:
     print("Version cache not found, creating")
-    versioncache = {"format": 1, "apps": []}
+    versioncache = {"format": 2, "apps": {}}
   os.makedirs("fdroid/repo", exist_ok=True)
   apps_cache = versioncache["apps"]
   for apk in apks:
@@ -45,13 +45,15 @@ def main():
               print("Warning: missing file for application: " + path)
           continue
         else:
-          for path in versioncache[apk["name"]]["paths"]:
+          print("Updating " + apk["name"] + ": new version is available")
+          for path in apps_cache[apk["name"]]["paths"]:
             if os.isfile(path):
               os.remove(path)
-          versioncache[apk["name"]] = {"version": fmt["ver"], "paths": []}
+          apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
       else:
-        versioncache[apk["name"]] = {"version": fmt["ver"], "paths": []}
-      app_paths = versioncache[apk["name"]]["paths"]
+        print("Adding " + apk["name"] + ": new application")
+        apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
+      app_paths = apps_cache[apk["name"]]["paths"]
       print("Downloading " + apk["name"] + " " + fmt["ver"])
     else:
       app_paths = []
@@ -78,6 +80,7 @@ def main():
         download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore, app_paths)
     else:
       download(apk["baseUrl"].format_map(fmt), forceFileName, ignore, app_paths)
+  print("Writing new version cache")
   with open("versioncache.json", 'w') as file:
     json.dump(versioncache, file)
 
