@@ -33,6 +33,9 @@ def main():
       if apk["name"] in apps_cache:
         if apps_cache[apk["name"]]["version"] == fmt["ver"]:
           print("Skipping " + apk["name"] + ": already up to date")
+          for path in apps_cache[apk["name"]]["paths"]:
+            if not os.isfile(path):
+              print("Warning: missing file for application: " + path)
           continue
         else:
           for path in versioncache[apk["name"]]["paths"]:
@@ -87,6 +90,7 @@ def download(download_url, fileName, ignore, paths):
       else:
         raise Exception("Could not get filename from " + download_url)
     fileName = "fdroid/repo/" + fileName
+    print("Using target file " + fileName)
     with open(fileName, 'wb') as file:
       for chunk in response.iter_content(chunk_size):
         file.write(chunk)
