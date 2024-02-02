@@ -41,13 +41,13 @@ def main():
         if apps_cache[apk["name"]]["version"] == fmt["ver"]:
           print("Skipping " + apk["name"] + ": already up to date")
           for path in apps_cache[apk["name"]]["paths"]:
-            if not os.isfile(path):
+            if not os.path.isfile(path):
               print("Warning: missing file for application: " + path)
           continue
         else:
           print("Updating " + apk["name"] + ": new version is available")
           for path in apps_cache[apk["name"]]["paths"]:
-            if os.isfile(path):
+            if os.path.isfile(path):
               os.remove(path)
           apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
       else:
