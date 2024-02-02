@@ -6,6 +6,7 @@ import re
 import requests
 import subprocess
 from urllib.parse import urlparse
+from shutil import rmtree
 
 def main():
   with open("apks.json") as file:
@@ -14,9 +15,15 @@ def main():
     with open("versioncache.json") as file:
       versioncache = json.load(file)
     if "format" not in versioncache or versioncache["format"] != 1:
+      print("Found outdated version cache, creating new")
       versioncache = {"format": 1, "apps": []}
+      rmtree("fdroid/repo")
+    else:
+      print("Found version cache, using")
   else:
+    print("Version cache not found, creating")
     versioncache = {"format": 1, "apps": []}
+  os.makedirs("fdroid/repo", exist_ok=True)
   apps_cache = versioncache["apps"]
   for apk in apks:
     fmt={}

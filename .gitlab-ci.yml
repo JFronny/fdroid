@@ -1,21 +1,21 @@
-image: ubuntu:jammy
+image:
+  name: registry.gitlab.com/fdroid/docker-executable-fdroidserver:master
+  entrypoint: [""]
 
 before_script:
-  - apt update
-  - DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common fdroidserver ca-certificates
-  - update-ca-certificates
+  - . /etc/profile.d/bsenv.sh
+  - GRADLE_USER_HOME=${home_vagrant}/.gradle
   - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
   - chmod 600 fdroid/config.yml fdroid/keystore.p12
-  - mkdir -p fdroid/repo
 
 pages:
   stage: deploy
   script:
     - ./download.py
     - cd fdroid
-    - fdroid update
+    - ${fdroidserver}/fdroid update
     - mkdir /fdroid
-    - fdroid deploy
+    - ${fdroidserver}/fdroid deploy
     - rm -rf /fdroid/archive
     - cd ..
     - mkdir public
