@@ -2,7 +2,7 @@ image: ubuntu:jammy
 
 before_script:
   - apt update
-  - DEBIAN_FRONTEND=noninteractive apt install -y wget software-properties-common fdroidserver ca-certificates
+  - DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common fdroidserver ca-certificates
   - update-ca-certificates
   - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
   - chmod 600 fdroid/config.yml fdroid/keystore.p12

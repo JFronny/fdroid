@@ -5,6 +5,7 @@ import os
 import re
 import requests
 import subprocess
+from urllib.parse import urlparse
 
 def main():
   with open("apks.json") as file:
@@ -12,8 +13,11 @@ def main():
   if os.path.isfile("versioncache.json"):
     with open("versioncache.json") as file:
       versioncache = json.load(file)
+    if "format" not in versioncache or versioncache["format"] != 1:
+      versioncache = {"format": 1, "apps": []}
   else:
-    versioncache = {}
+    versioncache = {"format": 1, "apps": []}
+  apps_cache = versioncache["apps"]
   for apk in apks:
     fmt={}
     forceFileName = None
@@ -26,13 +30,21 @@ def main():
         fmt["ver"] = get_version_regex(verObj["url"], verObj["regex"])
       fmt["ver_stripped"] = fmt["ver"].lstrip("v")
       fmt["ver_splitted"] = fmt["ver"].split(".")
-      if apk["name"] in versioncache and versioncache[apk["name"]] == fmt["ver"]:
-        print("Skipping " + apk["name"] + ": already up to date")
-        continue
+      if apk["name"] in apps_cache:
+        if apps_cache[apk["name"]]["version"] == fmt["ver"]:
+          print("Skipping " + apk["name"] + ": already up to date")
+          continue
+        else:
+          for path in versioncache[apk["name"]]["paths"]:
+            if os.isfile(path):
+              os.remove(path)
+          versioncache[apk["name"]] = {"version": fmt["ver"], "paths": []}
       else:
-        versioncache[apk["name"]] = fmt["ver"]
+        versioncache[apk["name"]] = {"version": fmt["ver"], "paths": []}
+      app_paths = versioncache[apk["name"]]["paths"]
       print("Downloading " + apk["name"] + " " + fmt["ver"])
     else:
+      app_paths = []
       print("Downloading " + apk["name"])
     if "sourceFileName" in apk:
       sfnObj = apk["sourceFileName"]
@@ -53,27 +65,34 @@ def main():
       for arch in apk["architectures"]:
         archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch)
         fmt["arch"] = arch
-        download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore)
+        download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore, app_paths)
     else:
-      download(apk["baseUrl"].format_map(fmt), forceFileName, ignore)
+      download(apk["baseUrl"].format_map(fmt), forceFileName, ignore, app_paths)
   with open("versioncache.json", 'w') as file:
     json.dump(versioncache, file)
 
-def download(download_url, forceFileName, ignore):
-  if forceFileName is not None:
-    fullForceFileName = "fdroid/repo/" + forceFileName
-    retcode = subprocess.call(["wget", "--progress=dot:mega", "-N", "-O", fullForceFileName, download_url])
-  elif download_url.endswith(".apk"):
-    retcode = subprocess.call(["wget", "--progress=dot:mega", "-N", "-P", "fdroid/repo", download_url])
-  else:
-    retcode = subprocess.call(["wget", "--progress=dot:mega", "-nc", "--content-disposition", "-P", "fdroid/repo", download_url])
-  if retcode != 0:
-    if forceFileName is not None:
-      # Under at least some conditions, `wget -O` creates an empty output file
-      # on error, which will break subsequent processing. Even if we're not
-      # ignoring the error, avoid letting the empty file be added to the cache.
-      # (Normally it would be overwritten anyway on the next run, but it might
-      # not be if the configuration has changed.)
+def download(download_url, fileName, ignore, paths):
+  try:
+    response = requests.get(download_url, allow_redirects=True, stream=True)
+    chunk_size = 8192
+    if fileName is None:
+      if download_url.endswith(".apk"):
+        fileName = os.path.basename(urlparse(download_url).path)
+      elif "Content-Disposition" in response.headers:
+        match = re.search('filename="(.+)"', response.headers["Content-Disposition"])
+        if match:
+          fileName = match.group(1)
+        else raise Exception("Could not get filename from content disposition of " + download_url)
+      else:
+        raise Exception("Could not get filename from " + download_url)
+    fileName = "fdroid/repo/" + fileName
+    with open(fileName, 'wb') as file:
+      for chunk in response.iter_content(chunk_size):
+        file.write(chunk)
+    paths += [fileName]
+  except Exception as e:
+    if fileName is not None:
+      # ensure we don't get empty leftover files
       try:
         os.unlink(fullForceFileName)
       except FileNotFoundError:
@@ -81,6 +100,9 @@ def download(download_url, forceFileName, ignore):
         pass
     if not ignore:
       raise Exception("Failed downloading " + download_url)
+    else:
+      print("Ignoring error:")
+      print(e)
 
 def get_version_regex(url, query):
   request = requests.get(url)
