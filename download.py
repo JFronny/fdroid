@@ -82,7 +82,8 @@ def download(download_url, fileName, ignore, paths):
         match = re.search('filename="(.+)"', response.headers["Content-Disposition"])
         if match:
           fileName = match.group(1)
-        else raise Exception("Could not get filename from content disposition of " + download_url)
+        else:
+          raise Exception("Could not get filename from content disposition of " + download_url)
       else:
         raise Exception("Could not get filename from " + download_url)
     fileName = "fdroid/repo/" + fileName
