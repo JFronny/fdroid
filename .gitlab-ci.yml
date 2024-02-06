@@ -25,6 +25,7 @@ pages:
     key: repo-cache
     paths:
       - fdroid/repo/*
+      - fdroid/stats/known_apks.txt
       - versioncache.json
   artifacts:
     paths:
