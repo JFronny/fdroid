@@ -5,6 +5,7 @@ import os
 import re
 import requests
 import subprocess
+import gquery
 from urllib.parse import urlparse
 from shutil import rmtree
 
@@ -89,6 +90,7 @@ def main():
 def download(download_url, fileName, ignore, paths):
   try:
     response = requests.get(download_url, allow_redirects=True, stream=True)
+    response.raise_for_status()
     if fileName is None:
       fileName = identify_file_name(download_url, response)
     fileName = "fdroid/repo/" + fileName
@@ -125,18 +127,15 @@ def identify_file_name(download_url, response):
     raise Exception("Could not get filename from " + download_url)
 
 def get_version_regex(url, query):
-  request = requests.get(url)
-  regex = re.search(query, request.text)
+  response = requests.get(url)
+  response.raise_for_status()
+  regex = re.search(query, response.text)
   return regex.group(1)
 
 def get_version_json(url, query):
-  request = requests.get(url)
-  version = request.json()
-  if not isinstance(query, list):
-    return version[query]
-  for query_part in query:
-    version = version[query_part]
-  return version
+  response = requests.get(url)
+  response.raise_for_status()
+  return gquery.query(response.json(), query)
 
 def remove_all(paths):
   for path in paths:
