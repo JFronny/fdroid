@@ -1,10 +1,12 @@
+# we have jq at home
+
 import re
 
 def query(json, query):
   if not isinstance(query, list):
     if isinstance(query, str) or isinstance(query, int):
       return json[query]
-    else
+    else:
       raise Exception("Unsupported query type")
   if not query:
     return json
@@ -32,7 +34,7 @@ def query(json, query):
           json = json[query_part]
       elif isinstance(query_part, int):
         json = json[query_part]
-      else
+      else:
         raise Exception("Unsupported query type")
     elif mode == "whereeq":
       if not isinstance(query_part, list) or len(query_part) != 2:
