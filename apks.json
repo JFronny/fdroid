@@ -51,7 +51,6 @@
   {
     "name": "Firefox",
     "baseUrl": "https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-{ver}/fenix-{ver_stripped}-{arch}.apk",
-    "forceFileName": "org.mozilla.firefox.apk",
     "version": {
       "url": "https://api.github.com/repos/mozilla-mobile/firefox-android/releases",
       "json": [
