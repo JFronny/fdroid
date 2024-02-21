@@ -40,7 +40,7 @@ def gquery(json, query):
         raise Exception("Unsupported whereeq query")
       found = []
       for json_part in json:
-        if not found and gquery(json_part, query_part[0]) == query_part[1]:
+        if gquery(json_part, query_part[0]) == query_part[1]:
           found.append(json_part)
       if not found:
         raise Exception("No matching element")
@@ -52,13 +52,12 @@ def gquery(json, query):
         raise Exception("Unsupported whereregex query")
       found = []
       for json_part in json:
-        if not found:
-          subpart = gquery(json_part, query_part[0])
-          if not isinstance(subpart, str):
-            continue
-          match = re.match(query_part[1], subpart)
-          if match:
-            found.append(json_part)
+        subpart = gquery(json_part, query_part[0])
+        if not isinstance(subpart, str):
+          continue
+        match = re.match(query_part[1], subpart)
+        if match:
+          found.append(json_part)
       if not found:
         raise Exception("No matching element")
       else:
@@ -70,7 +69,8 @@ def gquery(json, query):
       match = re.match(query_part, json)
       if not match:
         raise Exception("No match found")
-      json = re.group(1)
+      json = match.group(1)
+      mode = "normal"
     else:
       raise Exception("Unsupported mode")
   if mode != "normal":
