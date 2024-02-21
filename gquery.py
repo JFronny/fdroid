@@ -2,7 +2,7 @@
 
 import re
 
-def query(json, query):
+def gquery(json, query):
   if not isinstance(query, list):
     if isinstance(query, str) or isinstance(query, int):
       return json[query]
@@ -40,7 +40,7 @@ def query(json, query):
         raise Exception("Unsupported whereeq query")
       found = []
       for json_part in json:
-        if not found and query(json_part, query_part[0]) == query_part[1]:
+        if not found and gquery(json_part, query_part[0]) == query_part[1]:
           found.append(json_part)
       if not found:
         raise Exception("No matching element")
@@ -53,7 +53,7 @@ def query(json, query):
       found = []
       for json_part in json:
         if not found:
-          subpart = query(json_part, query_part[0])
+          subpart = gquery(json_part, query_part[0])
           if not isinstance(subpart, str):
             continue
           match = re.match(query_part[1], subpart)

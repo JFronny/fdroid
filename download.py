@@ -5,7 +5,7 @@ import os
 import re
 import requests
 import subprocess
-import gquery
+from gquery import gquery
 from urllib.parse import urlparse
 from shutil import rmtree
 
@@ -135,7 +135,7 @@ def get_version_regex(url, query):
 def get_version_json(url, query):
   response = requests.get(url)
   response.raise_for_status()
-  return gquery.query(response.json(), query)
+  return gquery(response.json(), query)
 
 def remove_all(paths):
   for path in paths:
