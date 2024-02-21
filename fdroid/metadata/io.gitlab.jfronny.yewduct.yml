@@ -9,7 +9,11 @@ Changelog: https://gitlab.com/JFronny/YewDuct/-/commits/yewduct/
 
 Summary: NewPipe fork with additional functionality
 Description: |-
-    NewPipe does not use any Google framework libraries, or the YouTube API. It only parses the website in order to gain the information it needs. Therefore this app can be used on devices without Google Services installed. Also, you don't need a YouTube account to use NewPipe, and it's FLOSS. This fork adds, among other things, integration with additional services, more default instances for existing services, ReturnYoutubeDislike and SponsorBlock integration as well as a (subjectively) better default configuration
+    NewPipe does not use any Google framework libraries, or the YouTube API.
+    It only parses the website in order to gain the information it needs.
+    Therefore this app can be used on devices without Google Services installed.
+    Also, you don't need a YouTube account to use NewPipe, and it's FLOSS.
+    This fork adds, among other things, integration with additional services, more default instances for existing services, ReturnYoutubeDislike and SponsorBlock integration as well as a (subjectively) better default configuration.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

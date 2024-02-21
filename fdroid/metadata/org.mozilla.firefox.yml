@@ -1,13 +1,18 @@
 Categories:
   - Internet
 License: MPL-2.0
+AuthorName: Mozilla
 WebSite: https://www.mozilla.org/firefox/
+SourceCode: https://github.com/mozilla-mobile/firefox-android
 IssueTracker: https://bugzilla.mozilla.org/
 Changelog: https://www.mozilla.org/firefox/releases/
 Donate: https://donate.mozilla.org/
 
 Summary: Firefox
-Description: Firefox browser for Android
+Description: |-
+    Get the people-first browser that's backed by a non-profit.
+    It's a new era in tech. Don't settle for a browser produced by giant, profit-driven, data-hoarding tech companies.
+    Firefox is the obvious choice for independent, ethical tech that respects your privacy and gives you more ways than ever before to tailor your internet experience exactly the way you want it.
 
 AutoUpdateMode: None
 UpdateCheckMode: None
