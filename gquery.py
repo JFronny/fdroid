@@ -40,7 +40,7 @@ def query(json, query):
         raise Exception("Unsupported whereeq query")
       found = []
       for json_part in json:
-        if (not found and query(json_part, query_part[0]) == query_part[1]):
+        if not found and query(json_part, query_part[0]) == query_part[1]:
           found.append(json_part)
       if not found:
         raise Exception("No matching element")
