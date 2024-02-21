@@ -15,21 +15,20 @@ def query(json, query):
     if mode == "normal":
       if isinstance(query_part, str):
         if query_part.startswith("@gq:"):
-          match query_part:
-            case "@gq:whereeq":
-              if not isinstance(json, list):
-                raise Exception("Cannot perform whereeq on non-list")
-              mode = "whereeq"
-            case "@gq:whereregex":
-              if not isinstance(json, list):
-                raise Exception("Cannot perform whereregex on non-list")
-              mode = "whereregex"
-            case "@gq:regex":
-              if not isinstance(json, str):
-                raise Exception("Cannot perform regex on non-string")
-              mode = "regex"
-            else:
-              raise Exception("Unsupported gq: " + query_part)
+          if query_part == "@gq:whereeq":
+            if not isinstance(json, list):
+              raise Exception("Cannot perform whereeq on non-list")
+            mode = "whereeq"
+          elif query_part == "@gq:whereregex":
+            if not isinstance(json, list):
+              raise Exception("Cannot perform whereregex on non-list")
+            mode = "whereregex"
+          elif query_part == "@gq:regex":
+            if not isinstance(json, str):
+              raise Exception("Cannot perform regex on non-string")
+            mode = "regex"
+          else:
+            raise Exception("Unsupported gq: " + query_part)
         else:
           json = json[query_part]
       elif isinstance(query_part, int):
