@@ -6,7 +6,7 @@
       "url": "https://api.github.com/repos/jmir1/aniyomi/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a", "x86"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "Bitwarden",
@@ -24,7 +24,7 @@
       "url": "https://api.github.com/repos/nullxception/boorusphere/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a", "x86_64"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "CloudStream 3",
@@ -61,7 +61,7 @@
         "@gq:regex", "fenix-(v[\\.0-9]+)"
       ]
     },
-    "architectures": ["arm64-v8a", "x86_64"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "GCamPhotosProxy",
@@ -100,7 +100,7 @@
       "url": "https://api.github.com/repos/mihonapp/mihon/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a", "x86_64"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "Molly",
@@ -118,7 +118,7 @@
       "url": "https://api.github.com/repos/CarlosEsco/Neko/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a", "x86"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "NewPipe x SponsorBlock",
@@ -176,7 +176,7 @@
       "url": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a", "x86_64"]
+    "architectures": ["arm64-v8a"]
   },
   {
     "name": "YewDuct",
