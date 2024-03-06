@@ -49,6 +49,8 @@ def main():
           apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
         elif len(apps_cache[apk["name"]]["paths"]) != (len(apk["architectures"]) if "architectures" in apk else 1):
           print("Redownloading " + apk["name"] + ": mistmatch in architecture count")
+          remove_all(apps_cache[apk["name"]]["paths"])
+          apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
         else:
           print("Skipping " + apk["name"] + ": already up to date")
           for path in apps_cache[apk["name"]]["paths"]:
