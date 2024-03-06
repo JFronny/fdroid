@@ -43,16 +43,18 @@ def main():
       fmt["ver_stripped"] = fmt["ver"].lstrip("v")
       fmt["ver_splitted"] = fmt["ver"].split(".")
       if apk["name"] in apps_cache:
-        if apps_cache[apk["name"]]["version"] == fmt["ver"]:
+        if apps_cache[apk["name"]]["version"] != fmt["ver"]:
+          print("Updating " + apk["name"] + ": new version is available")
+          remove_all(apps_cache[apk["name"]]["paths"])
+          apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
+        elif len(apps_cache[apk["name"]]["paths"]) != (len(apk["architectures"]) if "architectures" in apk else 1):
+          print("Redownloading " + apk["name"] + ": mistmatch in architecture count")
+        else:
           print("Skipping " + apk["name"] + ": already up to date")
           for path in apps_cache[apk["name"]]["paths"]:
             if not os.path.isfile(path):
               print("Warning: missing file for application: " + path)
           continue
-        else:
-          print("Updating " + apk["name"] + ": new version is available")
-          remove_all(apps_cache[apk["name"]]["paths"])
-          apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
       else:
         print("Adding " + apk["name"] + ": new application")
         apps_cache[apk["name"]] = {"version": fmt["ver"], "paths": []}
