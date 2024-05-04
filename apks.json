@@ -10,12 +10,7 @@
   },
   {
     "name": "Bitwarden",
-    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden-fdroid.apk",
-    "forceFileName": "bitwarden-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
-      "json": "tag_name"
-    }
+    "baseUrl": "https://mobileapp.bitwarden.com/fdroid/repo/com.x8bit.bitwarden-fdroid.apk"
   },
   {
     "name": "Boorusphere",
