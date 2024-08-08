@@ -149,6 +149,15 @@
     }
   },
   {
+    "name": "ShosetsuSY",
+    "baseUrl": "https://jfronny.gitlab.io/shosetsu/shosetsu-release.apk",
+    "forceFileName": "shosetsu-sy-{ver}.apk",
+    "version": {
+      "url": "https://jfronny.gitlab.io/shosetsu/version.json",
+      "json": ["elements", 0, "versionName"]
+    }
+  },
+  {
     "name": "Signal",
     "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
