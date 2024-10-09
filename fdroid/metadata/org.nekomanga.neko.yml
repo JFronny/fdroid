@@ -3,11 +3,11 @@ Categories:
   - Reading
 License: Apache-2.0
 AuthorName: CarlosEsco
-WebSite: https://github.com/CarlosEsco/Neko
-SourceCode: https://github.com/CarlosEsco/Neko
-IssueTracker: https://github.com/CarlosEsco/Neko/issues
+WebSite: https://github.com/nekomangaorg/Neko
+SourceCode: https://github.com/nekomangaorg/Neko
+IssueTracker: https://github.com/nekomangaorg/Neko/issues
 Translation: https://hosted.weblate.org/engage/tachiyomi/
-Changelog: https://github.com/CarlosEsco/Neko/releases
+Changelog: https://github.com/nekomangaorg/Neko/releases
 
 Summary: A Free, Open source unofficial manga reader for MangaDex
 Description: |-

@@ -107,10 +107,10 @@
   },
   {
     "name": "Neko",
-    "baseUrl": "https://github.com/CarlosEsco/Neko/releases/download/{ver}/neko-{arch}.apk",
+    "baseUrl": "https://github.com/nekomangaorg/Neko/releases/download/{ver}/neko-{arch}.apk",
     "forceFileName": "neko-{ver}-{arch}.apk",
     "version": {
-      "url": "https://api.github.com/repos/CarlosEsco/Neko/releases/latest",
+      "url": "https://api.github.com/repos/nekomangaorg/Neko/releases/latest",
       "json": "tag_name"
     },
     "architectures": ["arm64-v8a"]
