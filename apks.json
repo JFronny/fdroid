@@ -10,7 +10,7 @@
   },
   {
     "name": "Bitwarden",
-    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden-fdroid.apk.apk",
+    "baseUrl": "https://github.com/bitwarden/mobile/releases/download/{ver}/com.x8bit.bitwarden-fdroid.apk",
     "forceFileName": "bitwarden-fdroid-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/bitwarden/mobile/releases/latest",
