@@ -5,7 +5,7 @@ image:
 before_script:
   - . /etc/profile.d/bsenv.sh
   - git clone --depth 1 https://gitlab.com/fdroid/fdroidserver.git "${fdroidserver}"
-  - apt update; apt install --yes patch autoconf libtool pkg-config ant
+  - apt update; apt install --yes patch autoconf libtool pkg-config ant androguard/bookworm-backports
   - GRADLE_USER_HOME=${home_vagrant}/.gradle
   - echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
   - chmod 600 fdroid/config.yml fdroid/keystore.p12
