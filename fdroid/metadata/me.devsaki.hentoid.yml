@@ -1,0 +1,26 @@
+Categories:
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Syer10
+WebSite: https://tachiyomi.org
+SourceCode: https://github.com/jobobby04/TachiyomiSY
+IssueTracker: https://github.com/jobobby04/TachiyomiSY/issues
+Translation: https://hosted.weblate.org/engage/tachiyomi/?
+Changelog: https://github.com/jobobby04/TachiyomiSY/releases
+
+Summary: Doujinshi Android App
+Description: |-
+    Hentoid is an ad-free Doujinshi & H-Manga archiving and viewing app.
+    Hentoid currently supports:
+    nhentai, hitomi, asmhentai, tsumino, pururin, e-hentai, exHentai/sadpanda, 8muses, Doujins.com, Luscious.net, Porncomixonline, HBrowse, Hentai2Read, HentaiFox, Myreadingmanga, Manwha Hentai, Imhentai, Toonily, Allporncomic, Pixiv and MultPorn.
+    Note: Hentoid can still import downloads from FAKKU and Pururin.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 763ccebf10274ca1f4325b050aad6727a977070b35ec65319bf5f5e95dcbec71
+AntiFeatures:
+  NonFreeNet:
+    en-US: Supports viewing content from non-free websites.
+  NSFW:
+    en-US: App shows explicit content.

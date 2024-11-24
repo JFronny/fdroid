@@ -24,3 +24,8 @@ Description: |-
 AutoUpdateMode: None
 UpdateCheckMode: None
 AllowedAPKSigningKeys: 256cd9d8641b77b3e10958a2120a2e9ddaa2cc87351f48010d94e4b5059d7492
+AntiFeatures:
+  NonFreeNet:
+    en-US: Supports viewing content from non-free websites.
+  NSFW:
+    en-US: App shows explicit content.
