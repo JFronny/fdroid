@@ -84,7 +84,7 @@
       "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
       "json": ["assets", 0, "name"]
     }
-  }
+  },
   {
     "name": "LNReader",
     "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
