@@ -75,7 +75,7 @@
   {
     "name": "Hentoid",
     "baseUrl": "https://github.com/avluis/Hentoid/releases/download/{ver}/{source_file_name}",
-    "forceFileName": "hentoid-[ver}.apk",
+    "forceFileName": "hentoid-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
       "json": "tag_name"
