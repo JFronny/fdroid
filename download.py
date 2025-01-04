@@ -149,8 +149,10 @@ def get_version_regex(url, query):
           non_version_matches.append(match)
 
   if versioned_matches:
-      highest_version = max(versioned_matches, key=lambda x: x[0])
-      return highest_version[1]
+    if non_version_matches:
+      raise ValueError("Identified both valid and invalid versions. Adjust your regex!")
+    highest_version = max(versioned_matches, key=lambda x: x[0])
+    return highest_version[1]
   
   if len(non_version_matches) == 1:
       return non_version_matches[0]
