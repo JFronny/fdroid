@@ -50,16 +50,10 @@
   },
   {
     "name": "Firefox",
-    "baseUrl": "https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-{ver}/fenix-{ver_stripped}-{arch}.apk",
+    "baseUrl": "https://archive.mozilla.org/pub/fenix/releases/{ver}/android/fenix-{ver}-android-{arch}/fenix-{ver}.multi.android-{arch}.apk",
     "version": {
-      "url": "https://api.github.com/repos/mozilla-mobile/firefox-android/releases",
-      "json": [
-        "@gq:whereeq", ["prerelease", false],
-        "@gq:whereregex", ["name", "Firefox [\\.0-9]+"],
-        0,
-        "tag_name",
-        "@gq:regex", "fenix-(v[\\.0-9]+)"
-      ]
+      "url": "https://archive.mozilla.org/pub/fenix/releases/",
+      "regex": "a href=\"/pub/fenix/releases/(\\d{3,}\\.\\d+\\.\\d+)/\""
     },
     "architectures": ["arm64-v8a"]
   },

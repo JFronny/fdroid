@@ -8,6 +8,7 @@ import subprocess
 from gquery import gquery
 from urllib.parse import urlparse
 from shutil import rmtree
+from packaging.version import Version, InvalidVersion
 
 def main():
   with open("apks.json") as file:
@@ -133,8 +134,29 @@ def identify_file_name(download_url, response):
 def get_version_regex(url, query):
   response = requests.get(url)
   response.raise_for_status()
-  regex = re.search(query, response.text)
-  return regex.group(1)
+  matches = [x.group(1) for x in re.finditer(query, response.text)]
+  if not matches:
+    raise ValueError("No matches found.")
+  
+  versioned_matches = []
+  non_version_matches = []
+
+  for match in matches:
+      try:
+          parsed_version = Version(match)
+          versioned_matches.append((parsed_version, match))
+      except InvalidVersion:
+          non_version_matches.append(match)
+
+  if versioned_matches:
+      highest_version = max(versioned_matches, key=lambda x: x[0])
+      return highest_version[1]
+  
+  if len(non_version_matches) == 1:
+      return non_version_matches[0]
+
+  raise ValueError("Unable to determine a unique or highest version match.")
+  return matches[0]
 
 def get_version_json(url, query):
   response = requests.get(url)
