@@ -59,10 +59,10 @@
   },
   {
     "name": "GCamPhotosProxy",
-    "baseUrl": "https://jfronny.gitlab.io/gcamphotosproxy/app-release.apk",
+    "baseUrl": "https://jf-open-repo.gitlab.io/gcamphotosproxy/app-release.apk",
     "forceFileName": "GCamPhotosProxy-{ver}.apk",
     "version": {
-      "url": "https://jfronny.gitlab.io/gcamphotosproxy/version.json",
+      "url": "https://jf-open-repo.gitlab.io/gcamphotosproxy/version.json",
       "json": ["elements", 0, "versionName"]
     }
   },

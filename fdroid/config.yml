@@ -54,7 +54,7 @@ sdk_path: $ANDROID_HOME
 # The same policy is applied to the archive repo, if there is one.
 # repo_maxage: 0
 
-repo_url: https://jfronny.gitlab.io/fdroid/repo
+repo_url: https://jf-open-repo.gitlab.io/fdroid/repo
 repo_name: JFronnys F-Droid Repository
 repo_icon: fdroid-icon.png
 repo_description: |-
