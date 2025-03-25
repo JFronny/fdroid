@@ -27,7 +27,7 @@ jobs:
       - name: Clone fdroidserver
         uses: actions/checkout@v3
         with:
-          repository: fdroid/fdroidserver
+          repository: f-droid/fdroidserver
           path: fdroidserver
 
       - name: Set up environment
