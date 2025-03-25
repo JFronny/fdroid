@@ -1,0 +1,30 @@
+Categories:
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Jays2Kings
+WebSite: https://github.com/Jays2Kings/tachiyomiJ2K
+SourceCode: https://github.com/Jays2Kings/tachiyomiJ2K
+IssueTracker: https://github.com/Jays2Kings/tachiyomiJ2K/issues
+Translation: https://hosted.weblate.org/engage/tachiyomi/
+Changelog: https://github.com/Jays2Kings/tachiyomiJ2K/releases
+
+Summary: Free and open source manga reader for Android 6.0 and above
+Description: |-
+    TachiyomiJ2K is a fork of Tachiyomi, a free and open source manga reader for Android.
+    It offers a new UI and sevaral additional features
+
+    Features of Tachiyomi include:
+
+    * Online reading from sources such as MangaDex, MangaSee, Mangakakalot, and more
+    * Local reading of downloaded manga
+    * A configurable reader with multiple viewers, reading directions and other settings.
+    * MyAnimeList, AniList, Kitsu, Shikimori, and Bangumi support
+    * Categories to organize your library
+    * Light and dark themes
+    * Schedule updating your library for new chapters
+    * Create backups locally to read offline or to your desired cloud service
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: cdd3b74db50167ea4193e8b9187d6b147173d426680f809d4fd51c679a0237c8
