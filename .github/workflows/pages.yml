@@ -35,7 +35,7 @@ jobs:
           KEYSTORE: ${{ secrets.KEYSTORE }}
         run: |
           sudo apt update
-          sudo apt install --yes patch autoconf libtool pkg-config ant androguard
+          sudo apt install --yes patch autoconf libtool pkg-config ant androguard fdroidserver
           echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
           chmod 600 fdroid/config.yml fdroid/keystore.p12
 
