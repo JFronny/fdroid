@@ -1,0 +1,12 @@
+Categories:
+  - Internet
+License: MPL-2.0
+WebSite: https://www.brave.com/
+SourceCode: https://github.com/brave/brave-browser
+IssueTracker: https://github.com/brave/brave-browser/issues
+
+Summary: Brave Browser
+Description: Brave Browser for Android
+
+AutoUpdateMode: None
+UpdateCheckMode: None

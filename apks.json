@@ -6,7 +6,7 @@
       "url": "https://api.github.com/repos/jmir1/aniyomi/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
     "name": "Bitwarden",
@@ -24,7 +24,17 @@
       "url": "https://api.github.com/repos/nullxception/boorusphere/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+  },
+  {
+    "name": "Brave",
+    "baseUrl": "https://github.com/brave/brave-browser/releases/download/{ver}/BraveMono{arch}.apk",
+    "forceFileName": "brave-{ver}-{arch}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/brave/brave-browser/releases/latest",
+      "json": "tag_name"
+    },
+    "architectures": ["arm", "arm64", "x64", "x86"]
   },
   {
     "name": "CloudStream 3",
@@ -64,7 +74,7 @@
       "url": "https://archive.mozilla.org/pub/fenix/releases/",
       "regex": "a href=\"/pub/fenix/releases/(\\d{3,}\\.\\d+\\.\\d+)/\""
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
     "name": "GCamPhotosProxy",
@@ -116,7 +126,7 @@
       "url": "https://api.github.com/repos/mihonapp/mihon/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]
   },
   {
     "name": "Molly",
@@ -134,7 +144,7 @@
       "url": "https://api.github.com/repos/nekomangaorg/Neko/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
     "name": "NewPipe x SponsorBlock",
@@ -188,11 +198,12 @@
   },
   {
     "name": "TachiyomiJ2K",
-    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
+    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{arch}-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest",
       "json": "tag_name"
-    }
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
     "name": "TachiyomiSY",
@@ -201,7 +212,7 @@
       "url": "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest",
       "json": "tag_name"
     },
-    "architectures": ["arm64-v8a"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
     "name": "YewDuct",
