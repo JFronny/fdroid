@@ -1,0 +1,91 @@
+name: Deploy F-Droid Repository
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+  - cron: "45 2 * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Clone fdroidserver
+        uses: actions/checkout@v3
+        with:
+          repository: fdroid/fdroidserver
+          path: fdroidserver
+
+      - name: Set up environment
+        env:
+          KEYSTORE: ${{ secrets.KEYSTORE }}
+        run: |
+          sudo apt update
+          sudo apt install --yes patch autoconf libtool pkg-config ant androguard
+          echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
+          chmod 600 fdroid/config.yml fdroid/keystore.p12
+
+      - name: Restore cached data
+        id: cache-data-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            fdroid/repo/*
+            fdroid/stats/known_apks.txt
+            versioncache.json
+          key: ${{ runner.os }}-data
+
+      - name: Run download script
+        run: ./download.py
+
+      - name: Update F-Droid repository
+        env:
+          KEYSTOREPASS: ${{ secrets.KEYSTOREPASS }}
+        run: |
+          cd fdroid
+          ${{ github.workspace }}/fdroidserver/fdroid update
+          mkdir /fdroid
+          ${{ github.workspace }}/fdroidserver/fdroid deploy
+          cd ..
+
+      - name: Prepare public directory
+        run: |
+          mkdir public
+          cp -vr /fdroid/* public/
+          rm -rf /public/archive
+          cp index.html public/repo/
+
+      - name: Cache data
+        id: cache-data-save
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            fdroid/repo/*
+            fdroid/stats/known_apks.txt
+            versioncache.json
+          key: ${{ steps.cache-data-restore.outputs.cache-primary-key }}
+
+      - name: Create Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          
