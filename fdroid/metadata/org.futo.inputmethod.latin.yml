@@ -1,0 +1,23 @@
+Categories:
+  - Writing
+License: Apache-2.0
+AuthorName: FUTO
+WebSite: https://keyboard.futo.org/
+SourceCode: https://gitlab.futo.org/keyboard/latinime
+IssueTracker: https://github.com/futo-org/android-keyboard/issues
+
+AutoName: FUTO Keyboard
+Summary: A good keyboard that doesn't spy on users
+Description: |-
+    Your keyboard shouldn't connect to the internet.
+    We are building a modern keyboard that respects your privacy and security.
+
+    Features:
+    * Swipe to Type
+    * Offline Voice Input
+    * Smart Autocorrect
+    * Predictive Text
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 743fad5864abc426500b2dc2c47c8ad324cbcd16033f8016994841356374f995

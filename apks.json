@@ -49,6 +49,15 @@
     }
   },
   {
+    "name": "FUTO Keyboard",
+    "baseUrl": "https://github.com/futo-org/android-keyboard/releases/download/{ver}/keyboard-{ver}.apk",
+    "forceFileName": "futo-dantotsu-{ver}.apk",
+    "version": {
+      "url": "https://api.github.com/repos/futo-org/android-keyboard/releases/latest",
+      "json": "tag_name"
+    }
+  },
+  {
     "name": "Firefox",
     "baseUrl": "https://archive.mozilla.org/pub/fenix/releases/{ver}/android/fenix-{ver}-android-{arch}/fenix-{ver}.multi.android-{arch}.apk",
     "version": {
