@@ -51,7 +51,7 @@
   {
     "name": "FUTO Keyboard",
     "baseUrl": "https://github.com/futo-org/android-keyboard/releases/download/{ver}/keyboard-{ver}.apk",
-    "forceFileName": "futo-dantotsu-{ver}.apk",
+    "forceFileName": "futo-keyboard-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/futo-org/android-keyboard/releases/latest",
       "json": "tag_name"
@@ -76,27 +76,6 @@
     }
   },
   {
-    "name": "Hentoid",
-    "baseUrl": "https://github.com/avluis/Hentoid/releases/download/{ver}/{source_file_name}",
-    "forceFileName": "hentoid-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
-      "json": "tag_name"
-    },
-    "sourceFileName": {
-      "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
-      "json": ["assets", 0, "name"]
-    }
-  },
-  {
-    "name": "LNReader",
-    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
     "name": "MensaApp",
     "baseUrl": "https://github.com/kronos-et-al/MensaApp/releases/download/{ver}/{source_file_name}",
     "forceFileName": "MensaApp-{ver}.apk",
@@ -117,14 +96,6 @@
       "json": "tag_name"
     },
     "architectures": ["arm64-v8a"]
-  },
-  {
-    "name": "Molly",
-    "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}-FOSS.apk",
-    "version": {
-      "url": "https://api.github.com/repos/mollyim/mollyim-android/releases/latest",
-      "json": "tag_name"
-    }
   },
   {
     "name": "Neko",
@@ -184,14 +155,6 @@
     "version": {
       "url": "https://updates.signal.org/android/latest.json",
       "json": "versionName"
-    }
-  },
-  {
-    "name": "TachiyomiJ2K",
-    "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest",
-      "json": "tag_name"
     }
   },
   {
