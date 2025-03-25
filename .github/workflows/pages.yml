@@ -38,7 +38,7 @@ jobs:
           sudo apt install --yes patch autoconf libtool pkg-config ant androguard fdroidserver
           echo "$KEYSTORE" | base64 -d > fdroid/keystore.p12
           chmod 600 fdroid/config.yml fdroid/keystore.p12
-          
+
       - name: Ignore F-Droid ResParseError
         run: |
           sudo sed -i 's|raise ResParserError("res0 must be zero!")|log.warning("res0 must be zero!")|g' /usr/lib/python3/dist-packages/androguard/core/bytecodes/axml/__init__.py
@@ -63,15 +63,15 @@ jobs:
         run: |
           cd fdroid
           ${{ github.workspace }}/fdroidserver/fdroid update
-          mkdir /fdroid
-          ${{ github.workspace }}/fdroidserver/fdroid deploy
+          sudo mkdir /fdroid
+          sudo ${{ github.workspace }}/fdroidserver/fdroid deploy
           cd ..
 
       - name: Prepare public directory
         run: |
           mkdir public
           cp -vr /fdroid/* public/
-          rm -rf /public/archive
+          rm -rf public/archive
           cp index.html public/repo/
 
       - name: Cache data
