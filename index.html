@@ -180,19 +180,19 @@
             This is a repository of open-source apps to be used with F-Droid.<br>
             Applications in this repository are official binaries built by the original application developers.<br>
             I do not own the applications or any content available through those applications and simply provide a common location for downloading them.<br>
-            You can view all data and scripts used to generate this repo <a href="https://gitlab.com/jf-open-repo/fdroid">here</a>
+            You can view all data and scripts used to generate this repo <a href="https://github.com/jfronny/fdroid">here</a>
         </p>
         <p>To install this repository, open this url in F-Drod or scan the QR code:</p>
-        <a href="https://jf-open-repo.gitlab.io/fdroid/repo?fingerprint=937AD37D4C667BC0FFD48C4B26B35141BC3683EA0282B005B89CBB703AE3A587">
+        <a href="https://jfronny.github.io/fdroid/repo?fingerprint=937AD37D4C667BC0FFD48C4B26B35141BC3683EA0282B005B89CBB703AE3A587">
             <p><img src="index.png" alt="QR Code"></p>
-            <p>https://jf-open-repo.gitlab.io/fdroid/repo</p>
+            <p>https://jfronny.github.io/fdroid/repo</p>
         </a>
         <details id="items">
             <summary>Available Apps</summary>
         </details>
     </main>
     <script>
-        fetch("https://jf-open-repo.gitlab.io/fdroid/repo/index.xml")
+        fetch("https://jfronny.github.io/fdroid/repo/index.xml")
             .then(r=>r.text())
             .then(str=> new window.DOMParser().parseFromString(str, "text/xml"))
             .then(data=> {
