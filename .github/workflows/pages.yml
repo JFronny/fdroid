@@ -55,6 +55,8 @@ jobs:
           key: ${{ runner.os }}-data
 
       - name: Run download script
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: ./download.py
 
       - name: Update F-Droid repository
@@ -92,4 +94,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-          

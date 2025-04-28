@@ -4,7 +4,6 @@ import json
 import os
 import re
 import requests
-import subprocess
 from gquery import gquery
 from urllib.parse import urlparse
 from shutil import rmtree
@@ -92,9 +91,18 @@ def main():
   with open("versioncache.json", 'w') as file:
     json.dump(versioncache, file)
 
+def add_authentication(url, headers):
+  parsed_url = urlparse(url)
+  if parsed_url.netloc == "api.github.com":
+    token = os.getenv("GITHUB_TOKEN")
+    if token:
+      headers["Authorization"] = f"Bearer {token}"
+
 def download(download_url, fileName, ignore, paths):
   try:
-    response = requests.get(download_url, allow_redirects=True, stream=True)
+    headers = {}
+    add_authentication(download_url, headers)
+    response = requests.get(download_url, headers=headers, allow_redirects=True, stream=True)
     response.raise_for_status()
     if fileName is None:
       fileName = identify_file_name(download_url, response)
@@ -109,7 +117,7 @@ def download(download_url, fileName, ignore, paths):
     if fileName is not None:
       # ensure we don't get empty leftover files
       try:
-        os.unlink(fullForceFileName)
+        os.unlink(fileName)
       except FileNotFoundError:
         # Not sure if this can happen, but if it does, it's OK.
         pass
@@ -132,7 +140,9 @@ def identify_file_name(download_url, response):
     raise Exception("Could not get filename from " + download_url)
 
 def get_version_regex(url, query):
-  response = requests.get(url)
+  headers = {}
+  add_authentication(url, headers)
+  response = requests.get(url, headers=headers)
   response.raise_for_status()
   matches = [x.group(1) for x in re.finditer(query, response.text)]
   if not matches:
@@ -158,10 +168,11 @@ def get_version_regex(url, query):
       return non_version_matches[0]
 
   raise ValueError("Unable to determine a unique or highest version match.")
-  return matches[0]
 
 def get_version_json(url, query):
-  response = requests.get(url)
+  headers = {}
+  add_authentication(url, headers)
+  response = requests.get(url, headers=headers)
   response.raise_for_status()
   return gquery(response.json(), query)
 
