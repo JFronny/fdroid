@@ -1,0 +1,16 @@
+Categories:
+  - Writing
+License: GPL-3.0-only
+AuthorName: Johannes Frohnmeyer
+SourceCode: https://gitlab.com/JFronny/stupidnotes
+IssueTracker: https://gitlab.com/JFronny/stupidnotes/-/issues
+Changelog: https://gitlab.com/JFronny/stupidnotes/-/commits/master/
+
+Summary: Stupid Notes
+Description: |-
+    Stupid Notes is a simple note taking app with no frills.
+    It uses a local directory of markdown files to store notes.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: a4abfe8b993fc47c5ba48044e82755e9a5ca41385af88a3c961bd8f9c9248d52

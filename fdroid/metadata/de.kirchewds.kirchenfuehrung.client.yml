@@ -1,0 +1,15 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Johannes Frohnmeyer
+SourceCode: https://gitlab.com/kirchewds/kirchenfuehrung-client
+IssueTracker: https://gitlab.com/kirchewds/kirchenfuehrung-client/-/issues
+Changelog: https://gitlab.com/kirchewds/kirchenfuehrung-client/-/commits/master/
+
+Summary: Kirche Weil der Stadt
+Description: |-
+    Digitales Audioguide für die St. Peter und Paul Kirche in Weil der Stadt
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: c7b9303b32adf13e7f417c943714c7329464d6a1215c0112ca4da9a5edf6dbd4

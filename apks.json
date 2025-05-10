@@ -99,6 +99,15 @@
     }
   },
   {
+    "name": "Kirche Weil der Stadt",
+    "baseUrl": "https://kirchewds.gitlab.io/kirchenfuehrung-client/app-release.apk",
+    "forceFileName": "kirchenfuehrung-{ver}.apk",
+    "version": {
+      "url": "https://kirchewds.gitlab.io/kirchenfuehrung-client/version.json",
+      "json": ["elements", 0, "versionName"]
+    }
+  },
+  {
     "name": "LNReader",
     "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
     "version": {
@@ -194,6 +203,15 @@
     "version": {
       "url": "https://updates.signal.org/android/latest.json",
       "json": "versionName"
+    }
+  },
+  {
+    "name": "StupidNotes",
+    "baseUrl": "https://jf-open-repo.gitlab.io/stupidnotes/app-release.apk",
+    "forceFileName": "StupidNotes-{ver}.apk",
+    "version": {
+      "url": "https://jf-open-repo.gitlab.io/stupidnotes/version.json",
+      "json": ["elements", 0, "versionName"]
     }
   },
   {
