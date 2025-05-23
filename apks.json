@@ -51,12 +51,7 @@
   },
   {
     "name": "Dantotsu",
-    "baseUrl": "https://github.com/rebelonion/Dantotsu/releases/download/{ver}/app-release.apk",
-    "forceFileName": "dantotsu-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/rebelonion/Dantotsu/releases/latest",
-      "json": "tag_name"
-    }
+    "baseUrl": "https://akbvopenfl1.hopto.org/dantotsu-3.2.2.apk"
   },
   {
     "name": "FUTO Keyboard",
