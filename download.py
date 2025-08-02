@@ -36,7 +36,9 @@ def main():
     ignore = False
     if "version" in apk:
       verObj = apk["version"]
-      if "json" in verObj:
+      if "literal" in verObj:
+        fmt["ver"] = verObj["literal"]
+      elif "json" in verObj:
         fmt["ver"] = get_version_json(verObj["url"], verObj["json"])
       elif "regex" in verObj:
         fmt["ver"] = get_version_regex(verObj["url"], verObj["regex"])
