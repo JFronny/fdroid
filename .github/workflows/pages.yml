@@ -83,7 +83,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         if: steps.cache-data-restore.outputs.cache-hit
-        run: gh cache delete --repo ${{ github.repository }} ${{ steps.cache.outputs.cache-primary-key }}
+        run: gh cache delete --repo ${{ github.repository }} ${{ steps.cache-data-restore.outputs.cache-primary-key }}
 
       - name: Cache data
         id: cache-data-save
