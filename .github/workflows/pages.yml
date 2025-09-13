@@ -76,6 +76,15 @@ jobs:
           rm -rf public/archive
           cp index.html public/repo/
 
+      # Delete the old cache on hit to emulate a cache update. See
+      # https://github.com/actions/cache/issues/342.
+      - name: Delete old Cache
+        id: cache-data-clear
+        env:
+          GH_TOKEN: ${{ github.token }}
+        if: steps.cache-data-restore.outputs.cache-hit
+        run: gh cache delete --repo ${{ github.repository }} ${{ steps.cache.outputs.cache-primary-key }}
+
       - name: Cache data
         id: cache-data-save
         uses: actions/cache/save@v4
