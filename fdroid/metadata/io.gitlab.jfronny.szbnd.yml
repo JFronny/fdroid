@@ -1,0 +1,17 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Johannes Frohnmeyer
+SourceCode: https://git.jfronny.dev/Johannes/SzBnd
+IssueTracker: https://git.jfronny.dev/Johannes/SzBnd/issues
+Changelog: https://git.jfronny.dev/Johannes/SzBnd/commits/branch/master
+
+Summary: Browse root directories from any file manager
+Description: |-
+    SzBnd is a small utility app that allows you to browse root directories from any file manager app.
+    It works by providing a DocumentsProvider that file managers can use to access the filesystem.
+    This is especially useful for file managers that do not have root access themselves, but can use content providers to access files.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 858dff7581e8ad6bd2b12d60a443fb0f42a4b3b4919a5f1c8fc55d98dec283b0

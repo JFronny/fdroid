@@ -210,6 +210,15 @@
     }
   },
   {
+    "name": "SzBnd",
+    "baseUrl": "https://jf-open-repo.gitlab.io/szbnd/app-release.apk",
+    "forceFileName": "szbnd-{ver}.apk",
+    "version": {
+      "url": "https://jf-open-repo.gitlab.io/szbnd/version.json",
+      "json": ["elements", 0, "versionName"]
+    }
+  },
+  {
     "name": "TachiyomiJ2K",
     "baseUrl": "https://github.com/Jays2Kings/tachiyomiJ2K/releases/download/{ver}/tachiyomij2k-{arch}-{ver}.apk",
     "version": {
