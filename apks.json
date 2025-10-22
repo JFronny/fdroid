@@ -69,7 +69,7 @@
       "url": "https://archive.mozilla.org/pub/fenix/releases/",
       "regex": "a href=\"/pub/fenix/releases/(\\d{3,}\\.\\d+\\.\\d+)/\""
     },
-    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64"]
   },
   {
     "name": "GCamPhotosProxy",
