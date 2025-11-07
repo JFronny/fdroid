@@ -28,12 +28,11 @@
   },
   {
     "name": "Brave",
-    "baseUrl": "https://github.com/brave/brave-browser/releases/download/{ver}/BraveMono{arch}.apk",
-    "forceFileName": "brave-{ver}-{arch}.apk",
+    "baseUrl": "https://github.com/brave/brave-browser/releases/download/v{ver}/BraveMono{arch}.apk",
+    "forceFileName": "brave-v{ver}-{arch}.apk",
     "version": {
-      "literal": "v1.85.97",
-      "url": "https://api.github.com/repos/brave/brave-browser/releases/latest",
-      "json": "tag_name"
+      "url": "https://versions.brave.com/latest/release-android.version",
+      "regex": "^(.*)$"
     },
     "architectures": ["arm", "arm64", "x64", "x86"]
   },
