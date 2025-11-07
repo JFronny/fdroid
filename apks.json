@@ -31,6 +31,7 @@
     "baseUrl": "https://github.com/brave/brave-browser/releases/download/{ver}/BraveMono{arch}.apk",
     "forceFileName": "brave-{ver}-{arch}.apk",
     "version": {
+      "literal": "v1.85.97",
       "url": "https://api.github.com/repos/brave/brave-browser/releases/latest",
       "json": "tag_name"
     },
