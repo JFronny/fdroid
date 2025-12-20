@@ -1,0 +1,16 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Johannes Frohnmeyer
+SourceCode: https://git.jfronny.dev/johannes/zerointerest
+IssueTracker: https://git.jfronny.dev/johannes/zerointerest/issues
+Changelog: https://git.jfronny.dev/johannes/zerointerest/commits/branch/master
+
+Summary: Simple money lending
+Description: |-
+    ZeroInterest allows small groups of mutually trusted peers to easily manage debts between them.
+    It is built on Matrix, allowing anyone to use their own homeserver for privacy without having to set up new services.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 685c62320c74e361d9072a94b01a6d4bc0b1ed9142d207e55e63a1b6fcec3913

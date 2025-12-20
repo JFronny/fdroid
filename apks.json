@@ -244,5 +244,14 @@
       "url": "https://jfronny.gitlab.io/YewDuct/version.json",
       "json": ["elements", 0, "versionName"]
     }
+  },
+  {
+    "name": "ZeroInterest",
+    "baseUrl": "https://jfronny.github.io/zerointerest/android.apk",
+    "forceFileName": "zerointerest-{ver}.apk",
+    "version": {
+      "url": "https://jfronny.github.io/zerointerest/output-metadata.json",
+      "json": ["elements", 0, "versionName"]
+    }
   }
 ]
