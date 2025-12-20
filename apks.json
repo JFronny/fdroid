@@ -247,10 +247,10 @@
   },
   {
     "name": "ZeroInterest",
-    "baseUrl": "https://jfronny.github.io/zerointerest/android.apk",
+    "baseUrl": "https://zerointerest.jfronny.dev/android.apk",
     "forceFileName": "zerointerest-{ver}.apk",
     "version": {
-      "url": "https://jfronny.github.io/zerointerest/output-metadata.json",
+      "url": "https://zerointerest.jfronny.dev/output-metadata.json",
       "json": ["elements", 0, "versionName"]
     }
   }
