@@ -134,7 +134,7 @@
   },
   {
     "name": "Molly",
-    "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}-FOSS.apk",
+    "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/Molly-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/mollyim/mollyim-android/releases/latest",
       "json": "tag_name"
