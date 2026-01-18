@@ -194,7 +194,11 @@
   },
   {
     "name": "Signal",
-    "baseUrl": "https://updates.signal.org/android/Signal-Android-website-prod-universal-release-{ver}.apk",
+    "baseUrl": {
+      "url": "https://updates.signal.org/android/latest.json",
+      "json": "url"
+    },
+    "forceFileName": "Signal-Android-website-prod-universal-release-{ver}.apk",
     "version": {
       "url": "https://updates.signal.org/android/latest.json",
       "json": "versionName"

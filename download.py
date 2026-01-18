@@ -35,13 +35,7 @@ def main():
     forceFileName = None
     ignore = False
     if "version" in apk:
-      verObj = apk["version"]
-      if "literal" in verObj:
-        fmt["ver"] = verObj["literal"]
-      elif "json" in verObj:
-        fmt["ver"] = get_version_json(verObj["url"], verObj["json"])
-      elif "regex" in verObj:
-        fmt["ver"] = get_version_regex(verObj["url"], verObj["regex"])
+      fmt["ver"] = resolve_template_value(apk["version"], "version")
       fmt["ver_stripped"] = fmt["ver"].lstrip("v")
       fmt["ver_splitted"] = fmt["ver"].split(".")
       if apk["name"] in apps_cache:
@@ -68,11 +62,7 @@ def main():
       app_paths = versioncache["volatile_paths"]
       print("Downloading " + apk["name"])
     if "sourceFileName" in apk:
-      sfnObj = apk["sourceFileName"]
-      if "json" in sfnObj:
-        fmt["source_file_name"] = get_version_json(sfnObj["url"], sfnObj["json"])
-      elif "regex" in sfnObj:
-        fmt["source_file_name"] = get_version_regex(sfnObj["url"], sfnObj["regex"])
+      fmt["source_file_name"] = resolve_template_value(apk["sourceFileName"], "sourceFileName")
     if "forceFileName" in apk:
       forceFileName = apk["forceFileName"]
     if forceFileName is not None:
@@ -82,13 +72,14 @@ def main():
       del fmt["arch"]
     if "ignoreErrors" in apk:
       ignore = apk["ignoreErrors"]
+    base_url = resolve_template_value(apk["baseUrl"], "baseUrl")
     if "architectures" in apk:
       for arch in apk["architectures"]:
         archForceFileName = None if forceFileName is None else forceFileName.format(arch=arch)
         fmt["arch"] = arch
-        download(apk["baseUrl"].format_map(fmt), archForceFileName, ignore, app_paths)
+        download(base_url.format_map(fmt), archForceFileName, ignore, app_paths)
     else:
-      download(apk["baseUrl"].format_map(fmt), forceFileName, ignore, app_paths)
+      download(base_url.format_map(fmt), forceFileName, ignore, app_paths)
   print("Writing new version cache")
   with open("versioncache.json", 'w') as file:
     json.dump(versioncache, file)
@@ -99,6 +90,17 @@ def add_authentication(url, headers):
     token = os.getenv("GITHUB_TOKEN")
     if token:
       headers["Authorization"] = f"Bearer {token}"
+
+def resolve_template_value(value_spec, name):
+  if isinstance(value_spec, dict):
+    if "literal" in value_spec:
+      return value_spec["literal"]
+    if "json" in value_spec:
+      return get_version_json(value_spec["url"], value_spec["json"])
+    if "regex" in value_spec:
+      return get_version_regex(value_spec["url"], value_spec["regex"])
+    raise ValueError("Unsupported " + name + " configuration")
+  return value_spec
 
 def download(download_url, fileName, ignore, paths):
   try:
