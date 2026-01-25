@@ -1,6 +1,7 @@
 Categories:
-  - System
-License: MIT
+  - Money
+  - Internet
+License: GPL-3.0-only
 AuthorName: Johannes Frohnmeyer
 SourceCode: https://git.jfronny.dev/johannes/zerointerest
 IssueTracker: https://git.jfronny.dev/johannes/zerointerest/issues
