@@ -173,39 +173,53 @@
 <body>
     <main>
         <h1>
-            <img src="icons/fdroid-icon.png" style="width: 81px" alt="Repo Icon"><br>
+            <img id="repoIconImage" style="width: 81px" alt="Repo Icon"><br>
             JFronnys F-Droid Repository
         </h1>
         <p>
             This is a repository of open-source apps to be used with F-Droid.<br>
             Applications in this repository are official binaries built by the original application developers.<br>
             I do not own the applications or any content available through those applications and simply provide a common location for downloading them.<br>
-            You can view all data and scripts used to generate this repo <a href="https://github.com/jfronny/fdroid">here</a>
+            You can view all data and scripts used to generate this repo <a id="repoSourceLink">here</a>
         </p>
         <p>To install this repository, open this url in F-Drod or scan the QR code:</p>
-        <a href="https://jfronny.github.io/fdroid/repo?fingerprint=937AD37D4C667BC0FFD48C4B26B35141BC3683EA0282B005B89CBB703AE3A587">
-            <p><img src="index.png" alt="QR Code"></p>
-            <p>https://jfronny.github.io/fdroid/repo</p>
+        <a id="repoAddLink">
+            <p><img id="repoQrCodeImage" alt="QR Code"></p>
+            <p id="repoAddLinkText"></p>
         </a>
         <details id="items">
             <summary>Available Apps</summary>
         </details>
     </main>
     <script>
-        fetch("https://jfronny.github.io/fdroid/repo/index.xml")
-            .then(r=>r.text())
-            .then(str=> new window.DOMParser().parseFromString(str, "text/xml"))
-            .then(data=> {
+        const repoUrl = "https://jfronny.github.io/fdroid/repo";
+        const repoFingerprint = "937AD37D4C667BC0FFD48C4B26B35141BC3683EA0282B005B89CBB703AE3A587";
+        const repoSource = "https://github.com/jfronny/fdroid";
+        document.getElementById("repoSourceLink").href = repoSource;
+        document.getElementById("repoAddLink").href = `${repoUrl}?fingerprint=${repoFingerprint}`;
+        document.getElementById("repoAddLinkText").innerText = repoUrl;
+        document.getElementById("repoQrCodeImage").src = `${repoUrl}/index.png`;
+        document.getElementById("repoIconImage").src = `${repoUrl}/icons/fdroid-icon.png`;
+
+        fetch(`${repoUrl}/index.xml`)
+            .then(r => r.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
                 const container = document.querySelector("#items")
                 data.querySelectorAll("application")
                     .forEach(app => {
                         const name = app.querySelector("name")?.textContent;
                         const summary = app.querySelector("summary")?.textContent;
                         const url = app.querySelector("source")?.textContent || app.querySelector("web")?.textContent || "#!";
-                        
-                        let extra = [];
-                        extra.push(app.querySelector("package version")?.textContent);
-                        extra.push(app.querySelector("package nativecode")?.textContent);
+
+                        let packages = {};
+                        for (pkg of app.querySelectorAll("package")) {
+                            const version = pkg.querySelector("version")?.textContent;
+                            packages[version] = (packages[version] || []).concat([{
+                                arch: pkg.querySelector("nativecode")?.textContent?.replaceAll(',', ' ') || "all",
+                                url: `$repoUrl/${pkg.querySelector("apkname").textContent}`,
+                            }]);
+                        }
 
                         const card = document.createElement("div");
 
@@ -220,12 +234,23 @@
                         card.appendChild(summaryElem);
 
                         const extraElem = document.createElement("code");
-                        extraElem.innerText = extra.filter(it=>it).join(" ");
+                        for (const [version, pkgs] of Object.entries(packages)) {
+                            const verElem = document.createElement("div");
+                            verElem.innerText = version;
+                            for (pkg of pkgs) {
+                                const archElem = document.createElement("a");
+                                archElem.href = pkg.url;
+                                archElem.innerText = pkg.arch;
+                                verElem.innerHTML += "\n";
+                                verElem.appendChild(archElem);
+                            }
+                            extraElem.appendChild(verElem);
+                        }
                         card.appendChild(extraElem);
 
                         container.appendChild(card);
-                    })
-            })
+                    });
+            });
     </script>
 </body>
 </html>
