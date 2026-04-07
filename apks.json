@@ -82,16 +82,7 @@
   },
   {
     "name": "Hentoid",
-    "baseUrl": "https://github.com/avluis/Hentoid/releases/download/{ver}/{source_file_name}",
-    "forceFileName": "hentoid-{ver}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
-      "json": "tag_name"
-    },
-    "sourceFileName": {
-      "url": "https://api.github.com/repos/avluis/Hentoid/releases/latest",
-      "json": ["assets", 0, "name"]
-    }
+    "baseUrl": "https://jfronny.github.io/fdroid/repo/hentoid-v1.21.13.apk"
   },
   {
     "name": "Kirche Weil der Stadt",
