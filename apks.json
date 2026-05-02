@@ -82,7 +82,16 @@
   },
   {
     "name": "Hentoid",
-    "baseUrl": "https://jfronny.github.io/fdroid/repo/hentoid-v1.21.13.apk"
+    "baseUrl": "https://codeberg.org/VioletKnight/Hentoid/releases/download/{ver}/{source_file_name}",
+    "forceFileName": "hentoid-{ver}.apk",
+    "version": {
+      "url": "https://codeberg.org/api/v1/repos/VioletKnight/Hentoid/releases/latest",
+      "json": "tag_name"
+    },
+    "sourceFileName": {
+      "url": "https://codeberg.org/api/v1/repos/VioletKnight/Hentoid/releases/latest",
+      "json": ["assets", 0, "name"]
+    }
   },
   {
     "name": "Kirche Weil der Stadt",
