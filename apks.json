@@ -242,11 +242,12 @@
   },
   {
     "name": "ZeroInterest",
-    "baseUrl": "https://zerointerest.jfronny.dev/android.apk",
-    "forceFileName": "zerointerest-{ver}.apk",
+    "baseUrl": "https://zerointerest.jfronny.dev/zerointerest-{arch}-release.apk",
+    "forceFileName": "zerointerest-{ver}-{arch}.apk",
     "version": {
       "url": "https://zerointerest.jfronny.dev/output-metadata.json",
       "json": ["elements", 0, "versionName"]
-    }
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   }
 ]
