@@ -1,0 +1,23 @@
+Categories:
+  - Multimedia
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: ReVanced
+WebSite: https://revanced.app/
+SourceCode: https://github.com/ReVanced/revanced-manager
+IssueTracker: https://github.com/ReVanced/revanced-manager/issues
+Changelog: https://github.com/ReVanced/revanced-manager/releases
+Translation: https://translate.revanced.app/
+
+Summary: Morphe app patcher for Android
+Description: |-
+    Morphe is an Android app that patches YouTube, YouTube Music, and Reddit - stripping ads and giving you back control over your experience.
+    No root required.
+
+    Modern apps are full of ads and dark patterns designed to grab your attention.
+    Morphe patches them at the bytecode level - modifying the app directly on your device, without any of your data leaving it.
+    The result is a cleaner version of the app you already know, exactly the way you want it.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 0b6c9515afb195fac59601696ba0a7907a0b217ccf720b43148427ccf64343e7
