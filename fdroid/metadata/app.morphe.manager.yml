@@ -2,12 +2,12 @@ Categories:
   - Multimedia
   - Internet
 License: GPL-3.0-or-later
-AuthorName: ReVanced
-WebSite: https://revanced.app/
-SourceCode: https://github.com/ReVanced/revanced-manager
-IssueTracker: https://github.com/ReVanced/revanced-manager/issues
-Changelog: https://github.com/ReVanced/revanced-manager/releases
-Translation: https://translate.revanced.app/
+AuthorName: MorpheApp
+WebSite: https://morphe.software/
+SourceCode: https://github.com/MorpheApp/morphe-manager
+IssueTracker: https://github.com/MorpheApp/morphe-manager/issues
+Changelog: https://github.com/MorpheApp/morphe-manager/releases
+Translation: https://morphe.software/translate
 
 Summary: Morphe app patcher for Android
 Description: |-
