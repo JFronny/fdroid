@@ -142,7 +142,7 @@
   },
   {
     "name": "Morphe Manager",
-    "baseUrl": "https://github.com/mollyim/mollyim-android/releases/download/{ver}/morphe-manager-{ver_stripped}.apk",
+    "baseUrl": "https://github.com/MorpheApp/morphe-manager/releases/download/{ver}/morphe-manager-{ver_stripped}.apk",
     "version": {
       "url": "https://api.github.com/repos/MorpheApp/morphe-manager/releases/latest",
       "json": "tag_name"
