@@ -104,11 +104,12 @@
   },
   {
     "name": "LNReader",
-    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}.apk",
+    "baseUrl": "https://github.com/LNReader/lnreader/releases/download/{ver}/LNReader-{ver}-{arch}.apk",
     "version": {
       "url": "https://api.github.com/repos/LNReader/lnreader/releases/latest",
       "json": "tag_name"
-    }
+    },
+    "architectures": ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"]
   },
   {
     "name": "MensaApp",
