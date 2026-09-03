@@ -193,7 +193,7 @@
     }
   },
   {
-    "name": "ShosetsuSY",
+    "name": "ShosetsuJS",
     "baseUrl": "https://jfronny.gitlab.io/shosetsu/shosetsu-release.apk",
     "forceFileName": "shosetsu-sy-{ver}.apk",
     "version": {

@@ -2,14 +2,14 @@ Categories:
   - Multimedia
   - Reading
 License: GPL-3.0-only
-AuthorName: Syer10
+AuthorName: Johannes Frohnmeyer
 WebSite: https://tachiyomi.org
 SourceCode: https://gitlab.com/JFronny/shosetsu
 IssueTracker: https://gitlab.com/JFronny/shosetsu/-/issues
 
 Summary: The extendable novel reader for Android.
 Description: |-
-    This fork of Shosetsu contains the patches developed by Syer10 as well as some by JFronny.
+    This fork of Shosetsu maintains the patches developed by JFronny and Syer10 on top of the current development branch.
 
 AutoUpdateMode: None
 UpdateCheckMode: None
