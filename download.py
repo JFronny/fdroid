@@ -35,7 +35,7 @@ def main():
     forceFileName = None
     ignore = False
     if "version" in apk:
-      fmt["ver"] = resolve_template_value(apk["version"], "version")
+      fmt["ver"] = str(resolve_template_value(apk["version"], "version"))
       fmt["ver_stripped"] = fmt["ver"].lstrip("v")
       fmt["ver_splitted"] = fmt["ver"].split(".")
       if apk["name"] in apps_cache:
