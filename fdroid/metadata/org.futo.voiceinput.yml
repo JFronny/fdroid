@@ -1,0 +1,16 @@
+Categories:
+  - Writing
+License: LicenseRef-FUTO-Source-First-1.0
+AuthorName: FUTO
+WebSite: https://voiceinput.futo.org/
+SourceCode: https://gitlab.futo.org/keyboard/voiceinput
+IssueTracker: https://github.com/futo-org/voice-input/issues
+
+AutoName: FUTO Voice Input
+Summary: Privacy-friendly voice input
+Description: |-
+    A privacy-friendly voice input method that processes speech on-device.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+AllowedAPKSigningKeys: 743fad5864abc426500b2dc2c47c8ad324cbcd16033f8016994841356374f995

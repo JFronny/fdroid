@@ -63,6 +63,14 @@
     }
   },
   {
+    "name": "FUTO Voice Input",
+    "baseUrl": "https://app.futo.org/fdroid/repo/voice-{ver}.apk",
+    "version": {
+      "url": "https://app.futo.org/fdroid/repo/index-v1.json",
+      "json": ["packages", "org.futo.voiceinput", 0, "versionCode"]
+    }
+  },
+  {
     "name": "Firefox",
     "baseUrl": "https://archive.mozilla.org/pub/fenix/releases/{ver}/android/fenix-{ver}-android-{arch}/fenix-{ver}.multi.android-{arch}.apk",
     "version": {
