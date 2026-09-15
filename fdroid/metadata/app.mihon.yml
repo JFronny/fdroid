@@ -17,12 +17,14 @@ Description: |-
 
     * Online reading from a variety of sources
     * Local reading of downloaded content
-    * A configurable reader with multiple viewers, reading directions and other settings.
-    * MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, and Bangumi support
+    * A configurable reader with multiple viewers, reading directions and other settings
+    * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, and Bangumi
     * Categories to organize your library
     * Light and dark themes
     * Schedule updating your library for new chapters
     * Create backups locally to read offline or to your desired cloud service
+
+    Disclaimer: The developer(s) of this application do not have any affiliation with the content providers available, and this application hosts zero content.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

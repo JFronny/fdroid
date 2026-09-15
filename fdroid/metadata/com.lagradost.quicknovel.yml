@@ -7,22 +7,13 @@ SourceCode: https://github.com/LagradOst/QuickNovel
 IssueTracker: https://github.com/LagradOst/QuickNovel/issues
 Changelog: https://github.com/LagradOst/QuickNovel/releases
 
-Summary: Android app for downloading novels
+Summary: Adfree FOSS Android app for downloading and reading novels
 Description: |-
-    Adfree FOSS Android app for downloading novels
+    QuickNovel is an adfree FOSS Android app for downloading novels. It also functions as an Epub reader.
 
-    Providers used:
+    The app crawls and aggregates content from multiple third-party sources including Anna's Archive, Royal Road, Scribble Hub, Light Novel World, and many more.
 
-    * novelpassion.com
-    * bestlightnovel.com
-    * wuxiaworld.online
-    * royalroad.com
-    * wuxiaworld.site
-    * readlightnovel.org
-    * boxnovel.com
-    * comrademao.com
-    * lightnovelpub.com
-    * readnovelfull.com
+    Legal notice: QuickNovel does not host any content on the app, and has no control over what media is uploaded. It functions like a search engine, crawling and displaying links from publicly accessible websites.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

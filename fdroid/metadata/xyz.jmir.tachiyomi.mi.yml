@@ -9,20 +9,20 @@ IssueTracker: https://github.com/jmir1/aniyomi/issues
 Translation: https://hosted.weblate.org/engage/tachiyomi/?
 Changelog: https://github.com/jmir1/aniyomi/releases
 
-Summary: Tachiyomi fork with anime support
+Summary: Tachiyomi fork with anime and video support
 Description: |-
-    Aniyomi is a fork of Tachiyomi, a free and open source manga reader for Android, that adds anime support
+    Aniyomi is a full-featured player and reader, based on Mihon. It lets you discover and watch anime, cartoons, series, and more on your Android device.
 
     Features include:
 
-    * Online reading from sources such as MangaDex, MangaSee, Mangakakalot, and more
-    * Local reading of downloaded manga
+    * Local reading and watching of content.
     * A configurable reader with multiple viewers, reading directions and other settings.
-    * MyAnimeList, AniList, Kitsu, Shikimori, and Bangumi support
-    * Categories to organize your library
-    * Light and dark themes
-    * Schedule updating your library for new chapters
-    * Create backups locally to read offline or to your desired cloud service
+    * A configurable player built on mpv-android with multiple options and settings.
+    * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, Simkl, and Bangumi.
+    * Categories to organize your library.
+    * Light and dark themes.
+    * Schedule updating your library for new chapters/episodes.
+    * Create backups locally to read/watch offline or to your desired cloud service.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

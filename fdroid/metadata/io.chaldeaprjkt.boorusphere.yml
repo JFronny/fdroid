@@ -10,6 +10,8 @@ Changelog: https://github.com/nullxception/boorusphere/blob/main/CHANGELOG.md
 
 Summary: Simple, content-focused booru viewer for Android
 Description: |-
+    Boorusphere is a simple, content-focused booru viewer for Android.
+
     Features:
 
     * Simple and intuitive UI
@@ -28,5 +30,3 @@ AllowedAPKSigningKeys: 05c194fc6b18be06eabac1b48c14b0877c744a1ddd094c24d5879a788
 AntiFeatures:
   NonFreeNet:
     en-US: Supports viewing content from non-free websites.
-  NSFW:
-    en-US: App shows explicit content.

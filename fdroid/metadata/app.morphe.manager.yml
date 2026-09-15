@@ -18,6 +18,8 @@ Description: |-
     Morphe patches them at the bytecode level - modifying the app directly on your device, without any of your data leaving it.
     The result is a cleaner version of the app you already know, exactly the way you want it.
 
+    Disclaimer: The developer(s) of this application do not have any affiliation with the content providers available, and this application hosts zero content.
+
 AutoUpdateMode: None
 UpdateCheckMode: None
 AllowedAPKSigningKeys: 0b6c9515afb195fac59601696ba0a7907a0b217ccf720b43148427ccf64343e7

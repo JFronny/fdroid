@@ -11,19 +11,30 @@ Changelog: https://github.com/jobobby04/TachiyomiSY/releases
 
 Summary: Tachiyomi fork meant to push forward in the ways of usability and features
 Description: |-
-    TachiyomiSY is a fork of Tachiyomi, a free and open source manga reader for Android.
-    It offers sevaral additional features
+    TachiyomiSY is a fork of Mihon (formerly Tachiyomi), a free and open source manga reader for Android 8.0 and above. This version is based off TachiyomiAZ and is meant to push forward in usability and features.
 
-    Features of Tachiyomi include:
+    Features of Mihon include:
 
-    * Online reading from sources such as MangaDex, MangaSee, Mangakakalot, and more
-    * Local reading of downloaded manga
-    * A configurable reader with multiple viewers, reading directions and other settings.
-    * MyAnimeList, AniList, Kitsu, Shikimori, and Bangumi support
+    * Online reading from a variety of sources
+    * Local reading of downloaded content
+    * A configurable reader with multiple viewers, reading directions and other settings
+    * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, Bangumi, and Hikka
     * Categories to organize your library
     * Light and dark themes
     * Schedule updating your library for new chapters
     * Create backups locally to read offline or to your desired cloud service
+
+    Additional features:
+
+    * Latest tab, store up to 5 sources to view latest manga
+    * Automatic webtoon detection
+    * Manga recommendations using MAL and AniList
+    * Lewd filter, hide lewd manga in your library
+    * Dynamic Categories, view library in multiple ways
+    * Source migration, migrate manga from one source to another
+    * Drag and drop library sorting
+    * Library search engine with advanced filtering
+    * E-Hentai/ExHentai integration
 
 AutoUpdateMode: None
 UpdateCheckMode: None

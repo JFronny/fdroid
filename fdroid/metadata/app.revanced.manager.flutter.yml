@@ -9,11 +9,11 @@ IssueTracker: https://github.com/ReVanced/revanced-manager/issues
 Changelog: https://github.com/ReVanced/revanced-manager/releases
 Translation: https://translate.revanced.app/
 
-Summary: Application to use ReVanced on Android
+Summary: Application to patch and customize YouTube and other apps using ReVanced
 Description: |-
     Continuing the legacy of Vanced.
 
-    Customize your mobile experience through ReVanced by applying patches to your applications.
+    ReVanced Manager allows you to patch YouTube, YouTube Music, and other apps to remove ads and restore features. Customize your mobile experience by applying patches directly on your device.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

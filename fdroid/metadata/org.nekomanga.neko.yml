@@ -11,20 +11,18 @@ Changelog: https://github.com/nekomangaorg/Neko/releases
 
 Summary: A Free, Open source unofficial manga reader for MangaDex
 Description: |-
-    This is a MangaDex specific fork of Tachiyomi and TachiyomiJ2K.
-    This contains features specific to Mangadex that those versions cannot offer.
-    It also features almost every feature that J2K has except for other sources,local sources, and editting manga.
+    Neko is a free, open source unofficial manga reader for MangaDex.
 
-    Specific features:
+    Features include:
 
+    * MangaDex manga reader for Android 8+
     * Supports native login to MangaDex and 2FA
-    * Use MDList as Tracker
-    * Similar Manga Recommendations
-    * Manually sync of Manga to and from Mangadex follows list
-    * Sync Followed Manga's read chapters from MangaDex into Neko automatically
-    * Filter by Scanlation Group in chapter list
-    * Look at an additional source for missing chapters not hosted on MangaDex
-    * Ability to attempt to merge missing chapters from MangaDex with another source
+    * Offline reading
+    * MDList support
+    * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, and MangaBaka
+    * Custom computer generated similar manga recommendations, as well as user recommendations
+    * Syncing manga and read statuses to and from MangaDex and Neko
+    * Ability to merge missing chapters from MangaDex with other sources including Atsumaru, Toonily, Weeb Central, Project Suki, Comix, and Komga
 
 AutoUpdateMode: None
 UpdateCheckMode: None

@@ -21,5 +21,3 @@ AllowedAPKSigningKeys: 763ccebf10274ca1f4325b050aad6727a977070b35ec65319bf5f5e95
 AntiFeatures:
   NonFreeNet:
     en-US: Supports viewing content from non-free websites.
-  NSFW:
-    en-US: App shows explicit content.

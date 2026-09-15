@@ -8,18 +8,22 @@ SourceCode: https://github.com/recloudstream/cloudstream
 IssueTracker: https://github.com/recloudstream/cloudstream/issues
 Changelog: https://github.com/recloudstream/cloudstream/releases
 
-Summary: Android app for streaming and downloading Movies, TV-Series and Anime. (Prerelease)
+Summary: Android app for streaming Movies, TV-Series and Anime with extensions (Prerelease)
 Description: |-
-    CloudStream 3 is an Android app for streaming and downloading Movies, TV-Series and Anime.
-    This application is the automatically generated preview build and may not be as stable as the releases.
+    CloudStream is a media center that prioritizes and emphasizes complete freedom and flexibility for users and developers. This application is the automatically generated preview build and may not be as stable as the releases.
+
+    CloudStream is an extension-based multimedia player with tracking support. By default, this app doesn't provide any video sources; you have to install extensions to add functionality.
 
     FEATURES:
 
     * AdFree, No ads whatsoever
     * No tracking/analytics
     * Bookmarks
-    * Download and stream movies, tv-shows and anime
+    * Phone and TV support
     * Chromecast
+    * Extension system for personal customization
+
+    Important: CloudStream does not host any content.
 
 AutoUpdateMode: None
 UpdateCheckMode: None
@@ -27,5 +31,3 @@ AllowedAPKSigningKeys: c2755b1fbc6cefa6aa20739f527d09246525618a7e16edb2e2171c2c9
 AntiFeatures:
   NonFreeNet:
     en-US: Supports viewing content from non-free websites.
-  NSFW:
-    en-US: App shows explicit content.
