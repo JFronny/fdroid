@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Clone fdroidserver
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: f-droid/fdroidserver
           path: fdroidserver
@@ -55,7 +55,7 @@ jobs:
 
       - name: Restore cached data
         id: cache-data-restore
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: |
             fdroid/repo/*
@@ -100,7 +100,7 @@ jobs:
 
       - name: Cache data
         id: cache-data-save
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: |
             fdroid/repo/*
@@ -109,7 +109,7 @@ jobs:
           key: ${{ steps.cache-data-restore.outputs.cache-primary-key }}
 
       - name: Create Pages Artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: public/
 
