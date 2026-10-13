@@ -5,6 +5,12 @@ on:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      enable_manhole:
+        description: 'SSH Manhole (debugging)'
+        required: false
+        type: boolean
+        default: false
   schedule:
   - cron: "45 2 * * *"
 
@@ -56,6 +62,10 @@ jobs:
             fdroid/stats/known_apks.txt
             versioncache.json
           key: ${{ runner.os }}-data
+
+      - name: Start SSH Manhole
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.enable_manhole == 'true' }}
+        uses: valeriangalliat/action-sshd-cloudflared@f231ff81b1a41b9dc7c3aab65e4a1b08d952f068
 
       - name: Run download script
         env:
