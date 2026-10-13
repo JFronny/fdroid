@@ -121,15 +121,11 @@
   },
   {
     "name": "MensaApp",
-    "baseUrl": "https://github.com/kronos-et-al/MensaApp/releases/download/{ver}/{source_file_name}",
+    "baseUrl": "https://github.com/kronos-et-al/MensaApp/releases/download/{ver}/app-release.apk",
     "forceFileName": "MensaApp-{ver}.apk",
     "version": {
       "url": "https://api.github.com/repos/kronos-et-al/MensaApp/releases/latest",
       "json": "tag_name"
-    },
-    "sourceFileName": {
-      "url": "https://api.github.com/repos/kronos-et-al/MensaApp/releases/latest",
-      "json": ["assets", 0, "name"]
     }
   },
   {
