@@ -11,7 +11,7 @@ from shutil import rmtree
 from packaging.version import Version, InvalidVersion
 
 REPO_DIR = "fdroid/repo"
-ICON_DIR_PATTERN = re.compile(r"icons-\d+")
+ICON_DIR_PATTERN = re.compile(r"(?:icons|icons-\d+)")
 
 def main():
   with open("apks.json") as file:
