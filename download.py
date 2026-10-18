@@ -4,14 +4,19 @@ import json
 import os
 import re
 import requests
+import subprocess
 from gquery import gquery
 from urllib.parse import urlparse
 from shutil import rmtree
 from packaging.version import Version, InvalidVersion
 
+REPO_DIR = "fdroid/repo"
+ICON_DIR_PATTERN = re.compile(r"icons-\d+")
+
 def main():
   with open("apks.json") as file:
     apks = json.load(file)
+  tombstones = load_tombstones()
   if os.path.isfile("versioncache.json"):
     with open("versioncache.json") as file:
       versioncache = json.load(file)
@@ -28,8 +33,11 @@ def main():
     versioncache["volatile_paths"] = []
   remove_all(versioncache["volatile_paths"])
   versioncache["volatile_paths"] = []
-  os.makedirs("fdroid/repo", exist_ok=True)
+  os.makedirs(REPO_DIR, exist_ok=True)
+  remove_tombstones(tombstones)
+  prune_stale_icons()
   apps_cache = versioncache["apps"]
+  known_paths = set()
   for apk in apks:
     fmt={}
     forceFileName = None
@@ -50,6 +58,7 @@ def main():
         else:
           print("Skipping " + apk["name"] + ": already up to date")
           for path in apps_cache[apk["name"]]["paths"]:
+            known_paths.add(path)
             if not os.path.isfile(path):
               print("Warning: missing file for application: " + path)
           continue
@@ -80,6 +89,8 @@ def main():
         download(base_url.format_map(fmt), archForceFileName, ignore, app_paths)
     else:
       download(base_url.format_map(fmt), forceFileName, ignore, app_paths)
+    known_paths.update(app_paths)
+  warn_unknown_files(known_paths)
   print("Writing new version cache")
   with open("versioncache.json", 'w') as file:
     json.dump(versioncache, file)
@@ -110,7 +121,7 @@ def download(download_url, fileName, ignore, paths):
     response.raise_for_status()
     if fileName is None:
       fileName = identify_file_name(download_url, response)
-    fileName = "fdroid/repo/" + fileName
+    fileName = REPO_DIR + "/" + fileName
     print("Using target file " + fileName)
     chunk_size = 8192
     with open(fileName, 'wb') as file:
@@ -186,6 +197,101 @@ def remove_all(paths):
       os.remove(path)
     if os.path.isdir(path):
       rmtree(path)
+
+def load_tombstones():
+  if not os.path.isfile("tombstones.json"):
+    return []
+  with open("tombstones.json") as file:
+    tombstones = json.load(file)
+  if not isinstance(tombstones, list) or not all(isinstance(package, str) for package in tombstones):
+    raise ValueError("tombstones.json must contain a list of package names")
+  return set(tombstones)
+
+def remove_tombstones(tombstones):
+  if not tombstones:
+    return
+  for root, _, files in os.walk(REPO_DIR):
+    for name in files:
+      if not name.endswith(".apk"):
+        continue
+      path = os.path.join(root, name)
+      package, _, _ = identify_apk(path)
+      if package not in tombstones:
+        continue
+      print("Removing tombstoned application " + package + " from " + path)
+      remove_all([
+        path,
+        path + ".asc",
+        path[:-4] + "_src.tar.gz",
+      ])
+      remove_icons(package)
+
+def identify_apk(path):
+  try:
+    from fdroidserver import common
+    return common.get_apk_id(path)
+  except Exception as fdroid_error:
+    try:
+      result = subprocess.run(
+        ["aapt", "dump", "badging", path],
+        check=True,
+        capture_output=True,
+        text=True,
+      )
+      match = re.search(
+        r"^package: name='([^']+)' versionCode='([^']+)' versionName=",
+        result.stdout,
+        re.MULTILINE,
+      )
+      if match:
+        return match.group(1), int(match.group(2)), None
+      error = "aapt output did not contain package and version code"
+    except (FileNotFoundError, subprocess.CalledProcessError) as aapt_error:
+      error = str(aapt_error)
+    print("Warning: could not identify package for " + path + ": " + str(fdroid_error) + "; " + error)
+    return None, None, None
+
+def remove_icons(package):
+  icon_pattern = re.compile(r"^" + re.escape(package) + r"\.\d+\.png$")
+  for directory in os.scandir(REPO_DIR):
+    if not directory.is_dir() or not ICON_DIR_PATTERN.fullmatch(directory.name):
+      continue
+    for icon in os.scandir(directory.path):
+      if icon.is_file() and icon_pattern.fullmatch(icon.name):
+        remove_all([icon.path])
+
+def prune_stale_icons():
+  active_icons = set()
+  identification_failed = False
+  for entry in os.scandir(REPO_DIR):
+    if not entry.is_file() or not entry.name.endswith(".apk"):
+      continue
+    package, version_code, _ = identify_apk(entry.path)
+    if package is None or version_code is None:
+      identification_failed = True
+      continue
+    active_icons.add((package, str(version_code)))
+  if identification_failed:
+    print("Warning: retaining icons because at least one APK could not be identified")
+    return
+  for directory in os.scandir(REPO_DIR):
+    if not directory.is_dir() or not ICON_DIR_PATTERN.fullmatch(directory.name):
+      continue
+    for icon in os.scandir(directory.path):
+      match = re.fullmatch(r"([A-Za-z0-9._]+)\.(\d+)\.png", icon.name)
+      if icon.is_file() and match and (match.group(1), match.group(2)) not in active_icons:
+        print("Removing stale icon " + icon.path)
+        remove_all([icon.path])
+
+def warn_unknown_files(known_paths):
+  known_paths = {os.path.normpath(path) for path in known_paths}
+  for root, _, files in os.walk(REPO_DIR):
+    for name in files:
+      if not name.endswith(".apk"):
+        continue
+      path = os.path.normpath(os.path.join(root, name))
+      if path not in known_paths:
+        print("Warning: APK not known to download index: " + path)
 
 if __name__ == "__main__":
   main()
