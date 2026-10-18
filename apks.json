@@ -164,14 +164,6 @@
     "architectures": ["arm64-v8a", "armeabi-v7a", "x86_64", "x86"]
   },
   {
-    "name": "NewPipe x SponsorBlock",
-    "baseUrl": "https://github.com/polymorphicshade/NewPipe/releases/download/{ver}/newpipe_x_sponsorblock_{ver_stripped}.apk",
-    "version": {
-      "url": "https://api.github.com/repos/polymorphicshade/NewPipe/releases/latest",
-      "json": "tag_name"
-    }
-  },
-  {
     "name": "ProtonMail",
     "baseUrl": "https://github.com/ProtonMail/proton-mail-android/releases/download/{ver}/ProtonMail-{ver}.apk",
     "version": {
